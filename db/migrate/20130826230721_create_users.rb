@@ -4,10 +4,7 @@ class CreateUsers < ActiveRecord::Migration
     	t.string :user_name
     	t.string :email
     	t.text :bio
-    	t.string :skills
-    	t.string :applied_projects
-    	t.string :contributing_projects
-    	t.string :stared_projects
+    	t.string :skill
 
       t.timestamps
     end

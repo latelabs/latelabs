@@ -4,10 +4,7 @@ class CreateProjects < ActiveRecord::Migration
     	t.integer :user_id
     	t.string :title
     	t.text :explanation
-    	t.string :tech
-    	t.integer :applicants
-    	t.integer :collaborators
-    	t.integer :stars
+    	t.string :skill
     	t.string :code_repository_link
 
       t.timestamps

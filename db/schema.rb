@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130826230927) do
+ActiveRecord::Schema.define(:version => 20130828005842) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -43,13 +43,18 @@ ActiveRecord::Schema.define(:version => 20130826230927) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "explanation"
-    t.string   "tech"
-    t.integer  "applicants"
-    t.integer  "collaborators"
-    t.integer  "stars"
+    t.string   "skill"
     t.string   "code_repository_link"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+  end
+
+  create_table "skills", :force => true do |t|
+    t.string   "skill"
+    t.integer  "skillable_id"
+    t.string   "skillable_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "stars", :force => true do |t|
@@ -64,12 +69,9 @@ ActiveRecord::Schema.define(:version => 20130826230927) do
     t.string   "user_name"
     t.string   "email"
     t.text     "bio"
-    t.string   "skills"
-    t.string   "applied_projects"
-    t.string   "contributing_projects"
-    t.string   "stared_projects"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.string   "skill"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
