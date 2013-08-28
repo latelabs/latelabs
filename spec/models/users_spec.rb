@@ -16,6 +16,18 @@
 
 require 'spec_helper'
 
-describe Users do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User do
+  
+before do
+    @user = User.new(user_name: "Example User", email: "user@example.com")
+  end
+
+  subject { @user }
+
+  it { should have_many(:projects) }
+  it { should have_many(:messages) }
+  it { should have_many(:skills) }
+
+  # it { should validate_presence_of(:name) }
+  # it { should validate_presence_of(:email) }
 end

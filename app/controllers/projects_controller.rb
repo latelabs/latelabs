@@ -1,19 +1,28 @@
 class ProjectsController < ApplicationController
+	
+	def index
+		@project = Project.all
+	end
+
+	def new
+	@project = Project.new
+	end
+
+	def create
+
+	end
+
+	def show
+		@project = Project.find(params[:id])
+	end
+
+	def edit
+
+	end
+
+	def destroy
+
+	end
+
+
 end
-
-# :user_id
-# :title
-# :explanation
-# :stack
-# :startdate
-# :applicants
-# :collaborators
-# :screenshots
-# :code_repository_link
-# :stars
-
-# belongs_to user
-# has_many applicants through applications
-# has_many contributors through contributions
-# has_many followers thgouh
-# stared

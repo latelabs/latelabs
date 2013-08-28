@@ -17,6 +17,6 @@
 
 require 'spec_helper'
 
-describe Projects do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+# describe Projects do
+#   pending "add some examples to (or delete) #{__FILE__}"
+# end
