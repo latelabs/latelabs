@@ -1,11 +1,22 @@
+# == Schema Information
+#
+# Table name: skills
+#
+#  id             :integer          not null, primary key
+#  skill          :string(255)
+#  skillable_id   :integer
+#  skillable_type :string(255)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
 class Skill < ActiveRecord::Base
-  belongs_to :skillable, polymorphic: true
-end
+attr_accessible :skill
+
+has_many :users, :through => :skillsets, :source => :skillable, :source_type => "User"
  
-class User < ActiveRecord::Base
-  has_many :skills, as: :skillable
-end
+has_many :projects, :through => :skillsets, :source => :skillable, :source_type => "Project"
  
-class Project < ActiveRecord::Base
-  has_many :skills, as: :skillable
+has_many :skillsets
+
 end

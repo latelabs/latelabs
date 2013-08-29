@@ -8,6 +8,20 @@
 </head>
 <body>
 
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.user_name %></strong>
+  <%= link_to 'Edit profile', edit_user_registration_path %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path %> |
+  <%= link_to "Login", new_user_session_path %>
+  <%= link_to "GitHub", user_omniauth_authorize_path(:github) %>
+
+<% end %>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
 <%= yield %>
 
 </body>

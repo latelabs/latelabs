@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: application
+# Table name: applications
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer

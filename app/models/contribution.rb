@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: contribution
+# Table name: contributions
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer

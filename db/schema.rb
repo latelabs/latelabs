@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130828005842) do
+ActiveRecord::Schema.define(:version => 20130828235411) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -57,6 +57,14 @@ ActiveRecord::Schema.define(:version => 20130828005842) do
     t.datetime "updated_at",     :null => false
   end
 
+  create_table "skillsets", :force => true do |t|
+    t.integer  "skill_id"
+    t.integer  "skillable_id"
+    t.string   "skillable_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
   create_table "stars", :force => true do |t|
     t.integer  "user_id"
     t.integer  "project_id"
@@ -69,9 +77,23 @@ ActiveRecord::Schema.define(:version => 20130828005842) do
     t.string   "user_name"
     t.string   "email"
     t.text     "bio"
-    t.string   "skill"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["user_name"], :name => "index_users_on_user_name", :unique => true
 
 end

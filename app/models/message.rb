@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: message
+# Table name: messages
 #
 #  id             :integer          not null, primary key
 #  user_sender    :integer
@@ -13,7 +13,6 @@
 #
 
 class Message < ActiveRecord::Base
-  attr_accessible :title, :body, :created_at, :user_sender, :user_receivers, :project_id
+  attr_accessible :title, :body, :user_sender, :user_receivers, :project_id
   belongs_to :user
-	has_many :receivers
 end
