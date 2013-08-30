@@ -31,7 +31,7 @@
 <div class="show_projects">
 <% @projects_api.each do |project| %>
 <ul>	
-<li><%= project['name'] %></li>
+<li><a href="../projects/new"><%= project['name'] %></a></li>
 </ul>
 <% end %>
 </div>

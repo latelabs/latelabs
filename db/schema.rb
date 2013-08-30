@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20130828235411) do
     t.text     "explanation"
     t.string   "skill"
     t.string   "code_repository_link"
+    t.string   "gh_repos"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
   end

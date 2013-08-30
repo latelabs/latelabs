@@ -8,6 +8,10 @@ class ProjectsController < ApplicationController
 
 	def new
 		@project = Project.new
+
+		projects_url = @user.gh_repos
+		@projects_api = JSON.load(open(projects_url))
+
 	end
 
 	def create

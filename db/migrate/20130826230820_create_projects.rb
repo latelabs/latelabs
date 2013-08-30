@@ -6,7 +6,8 @@ class CreateProjects < ActiveRecord::Migration
     	t.text :explanation
     	t.string :skill
     	t.string :code_repository_link
-
+      t.string :gh_repos
+      
       t.timestamps
     end
   end
