@@ -1,1 +1,37 @@
-<%= @user.user_name %>
+<div class="user_info">
+<ul>
+<li><img src="http://www.gravatar.com/avatar/<%= @user.gravartar_id %>"/></li>
+<li>Username: <%= @user.user_name %></li>
+<li>Location: <%= @user.location %></li>
+<li>GitHub Followers:<%= @user.gh_followers %></li>
+<li>Following on GitHub:<%= @user.gh_following %></li>
+<li>Public Repos on Github: <%= @user.gh_public_repos %></li>
+<li>Private Repost on Github<%= @user.gh_private_repos %></li>
+<li># of Collaborators on Public Projects:<%= @user.gh_collaborators %></li>
+</ul>
+</div>
+
+
+<% @activity_api.each do |event| %>
+<div class="activity_feed">
+<ul>	
+<li><%= event['type'] %></li>
+<li><%= event['repo']['name'] %></li>
+
+<%# event['payload']['commits'].each do |comment| %>
+	<%#= comment['message'] %>
+<%# end %>	
+
+<li><%= event['created_at'] %></li>
+</ul>
+</div>
+<% end %>
+
+
+<div class="show_projects">
+<% @projects_api.each do |project| %>
+<ul>	
+<li><%= project['name'] %></li>
+</ul>
+<% end %>
+</div>

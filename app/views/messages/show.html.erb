@@ -1,0 +1,44 @@
+<div class="oneusermessages">
+<strong><%= @message.title.capitalize %></strong>
+<br>
+<strong><font style="font-size:10px; color:grey;"><%= @message.created_at %></font></strong>
+<hr>
+<a href='/messages/new/?user_receiver=<%=@message.user_sender %>'><button>Reply</button></a>
+<br>
+<blockquote><%= @message.body %></blockquote>
+</div>
+
+
+
+<div class="usermessagessent">
+  <h4 style="color:grey;">Sent (<%= current_user.messages_sent.count %>)</h4>
+<% current_user.messages_sent.reverse.each do |m| %>
+  <li>
+    <center><strong><%= m.title %></strong></center>
+</li>
+<hr>
+<% end %>
+</div>
+
+
+
+
+<div class="profiletitle">
+<strong><h4><%= current_user.user.user_name %>'s
+<br> Private Feed</h4></strong>
+</div>
+
+<div class="usermessages">
+<h4 style="color:grey;">Inbox (<%= current_user.messages_received.count %>)</h4>
+<% current_user.messages_received.reverse.each do |m| %>
+  <li>
+    <center><blockquote><strong><a href='/messages/<%= m.id%>'> <%= m.title %> </a></strong></blockquote></center>
+</li>
+<hr>
+<% end %>
+</div>
+
+
+<div class="username">
+<center><h1><%= current_user.user.users_name %></h1></center>
+</div>

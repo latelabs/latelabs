@@ -18,7 +18,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :user_name, :bio
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :user_name, :bio, :gh_followers, :location, :gh_following, :gh_private_repos,
+									:gh_collaborators, :hireable, :gravartar_id, :gh_url, :gh_public_repos, :gh_orgs, :gh_events
 	has_many :projects
 	has_many :applications
 	has_many :contributions
@@ -33,10 +34,23 @@ class User < ActiveRecord::Base
  	validates_presence_of :user_name
 
 	def self.from_omniauth(auth)
+
 	  where(auth.slice(:provider, :uid)).first_or_create do |user|
 	    user.provider = auth.provider
 	    user.uid = auth.uid
 	    user.user_name = auth.info.nickname
+	    user.location = auth.extra.raw_info.location
+	    user.gh_followers = auth.extra.raw_info.followers
+	    user.gh_following = auth.extra.raw_info.following
+	    user.gh_collaborators = auth.extra.raw_info.collaborators
+	    user.gh_private_repos = auth.extra.raw_info.total_private_repos
+	    user.gh_public_repos = auth.extra.raw_info.public_repos
+	    user.gravartar_id = auth.extra.raw_info.gravatar_id
+	    user.gh_url = auth.extra.raw_info.url
+	    user.gh_orgs = auth.extra.raw_info.organizations_url
+	    user.gh_repos = auth.extra.raw_info.repos_url
+	    user.hireable = auth.extra.raw_info.hireable
+	    user.gh_events = auth.extra.raw_info.events_url
 	  end
 	end
 

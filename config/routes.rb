@@ -3,7 +3,7 @@ Latelabs::Application.routes.draw do
   devise_for :users, path_names: {sign_in: "gitin", sign_out: "destroy"},
                      controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-  resources :users, :projects
+  resources :users, :projects, :messages
 
   root :to => "projects#index"
   # The priority is based upon order of creation:

@@ -1,0 +1,20 @@
+ul{
+	list-style-type: none;
+}
+header .auth{
+	float: right;
+}
+.activity_feed{
+	width: 250px;
+}
+.activity_feed ul{
+	width: 200px;
+}
+.activity_feed ul li{
+	width: 200px;
+}
+
+
+.show_projects{
+	margin-left: 500px;
+}

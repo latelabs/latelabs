@@ -1,0 +1,18 @@
+<div class="newmessage">
+    <br>
+<strong><h2>New Message</h2></center></strong>
+
+ <%= form_for @message do |f| %>
+  <%= f.hidden_field :user_reciever %>
+  <br>
+  <%= f.text_field :subject %>
+  <%= f.label :subject %>
+    <br>
+  <%= f.text_area :body %>
+  <%= f.label :body %>
+  <br>
+  <br>
+  <center><%= f.submit %></center>
+<% end %>
+</div>
+
