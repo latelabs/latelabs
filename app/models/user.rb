@@ -20,6 +20,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :user_name, :bio, :gh_followers, :location, :gh_following, :gh_private_repos,
 									:gh_collaborators, :hireable, :gravartar_id, :gh_url, :gh_public_repos, :gh_orgs, :gh_events
+	
+	include UsersHelper
+
 	has_many :projects
 	has_many :applications
 	has_many :contributions

@@ -1,1 +1,9 @@
-<%= @projects_api %>
+<div class="show_projects">
+<% @projects_api.each do |project| %>
+	<ul>	
+	<li><%= link_to project['name'], project['url'] %></li>
+	</ul>
+<% end %>
+</div>
+
+<%= render :partial => 'form' %>

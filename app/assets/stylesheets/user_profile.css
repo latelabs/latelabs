@@ -2,7 +2,8 @@ ul{
 	list-style-type: none;
 }
 header .auth{
-	float: right;
+	padding:25px 0;
+	background-color: orange;
 }
 .activity_feed{
 	width: 250px;
@@ -16,5 +17,6 @@ header .auth{
 
 
 .show_projects{
-	margin-left: 500px;
+	margin-left: 20px;
+	float:left;
 }

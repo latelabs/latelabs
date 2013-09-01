@@ -11,10 +11,12 @@
 </ul>
 </div>
 
+<%= link_to "New Project", :controller => "projects", :action => "new" %>
+
 
 <% @activity_api.each do |event| %>
 <div class="activity_feed">
-<ul>	
+ <ul>	
 <li><%= event['type'] %></li>
 <li><%= event['repo']['name'] %></li>
 
@@ -27,11 +29,4 @@
 </div>
 <% end %>
 
-
-<div class="show_projects">
-<% @projects_api.each do |project| %>
-<ul>	
-<li><a href="../projects/new"><%= project['name'] %></a></li>
-</ul>
-<% end %>
 </div>

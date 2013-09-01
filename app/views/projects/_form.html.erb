@@ -1,0 +1,13 @@
+<%= form_for @project do |f| %>
+  <%= f.text_field :title, :autofocus => true %>
+  <%= f.label :title %>
+  <br>
+  <%= f.text_field :explanation %>
+  <%= f.label :explanation %>
+  <br>
+  <%= f.text_field :skill %>
+  <%= f.label :skill %>
+  <br>
+  <p><p>
+  <%= f.submit  class: "btn btn-primary" %>
+<% end %>
