@@ -7,8 +7,9 @@ class ProjectsController < ApplicationController
 	end
 
 	def new
+
 		@project = Project.new
-		@projects_api = []		
+		@projects_api = []	
 		
 		unless User.find(current_user.id).hireable.nil?
 			projects_url = current_user.gh_repos
@@ -23,7 +24,16 @@ class ProjectsController < ApplicationController
   end
 
 	def show
+		
 		@project = Project.find(params[:id])
+		
+		@skills_api = []
+
+		unless User.find(current_user.id).hireable.nil?
+			#skills_url = current_project.skills
+			#@skills_api = JSON.load(open(skills_url))
+		end
+
 	end
 
 	def edit

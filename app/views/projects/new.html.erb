@@ -4,12 +4,27 @@
 	<ul class="project">	
 	<li class="title"><%= project['name'] %></li>
 	<li class="code"><%= project['html_url'] %></li>
-	<li><%= project['languages_url'] %></li>
-	<li><%#= project['collaborators'] %></li>
+	<li class="skills"><%= project['languages_url'] %></li>
+	<li class="contributors"><%= project['contributors_url'] %></li>
 
 	</ul>
 <% end %>
 
 </div>
 
-<%= render :partial => 'form' %>
+<%= form_for @project do |f| %>
+  <%= f.text_field :title, :autofocus => true %>
+  <%= f.label :title %>
+  <br>
+  <%= f.text_field :code_repository_link %>
+  <%= f.label :code %>
+  <br>
+  <%= f.text_field :skill %>
+  <%= f.label :skills %>
+  <br>
+  <%= f.text_field :contributors_link %>
+  <%= f.label :contributors %>
+  <br>
+  <p><p>
+  <%= f.submit  class: "btn btn-primary" %>
+<% end %>
