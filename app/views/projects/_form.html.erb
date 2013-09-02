@@ -2,11 +2,17 @@
   <%= f.text_field :title, :autofocus => true %>
   <%= f.label :title %>
   <br>
+  <%= f.text_field :code_repository_link %>
+  <%= f.label :code %>
+  <br>
   <%= f.text_field :explanation %>
   <%= f.label :explanation %>
   <br>
   <%= f.text_field :skill %>
-  <%= f.label :skill %>
+  <%= f.label :skills %>
+  <br>
+  <%#= f.text_field :contributors %>
+  <%#= f.label :contributors %>
   <br>
   <p><p>
   <%= f.submit  class: "btn btn-primary" %>

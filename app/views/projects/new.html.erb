@@ -1,9 +1,15 @@
 <div class="show_projects">
+
 <% @projects_api.each do |project| %>
-	<ul>	
-	<li><%= link_to project['name'], project['url'] %></li>
+	<ul class="project">	
+	<li class="title"><%= project['name'] %></li>
+	<li class="code"><%= project['html_url'] %></li>
+	<li><%= project['languages_url'] %></li>
+	<li><%#= project['collaborators'] %></li>
+
 	</ul>
 <% end %>
+
 </div>
 
 <%= render :partial => 'form' %>

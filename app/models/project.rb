@@ -13,7 +13,7 @@
 #
 
 class Project < ActiveRecord::Base
-  attr_accessible :title, :explanation, :skill, :code_repository_link, :gh_repos, :contributor
+  attr_accessible :title, :explanation, :skill, :code_repository_link, :gh_repos, :contributors
 
   belongs_to :user
 

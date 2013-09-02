@@ -8,7 +8,8 @@ class ProjectsController < ApplicationController
 
 	def new
 		@project = Project.new
-		@projects_api = [ ]		
+		@projects_api = []		
+		
 		unless User.find(current_user.id).hireable.nil?
 			projects_url = current_user.gh_repos
 			@projects_api = JSON.load(open(projects_url))
