@@ -1,9 +1,12 @@
 ul{
 	list-style-type: none;
 }
-header .auth{
+.header{
 	padding:25px 0;
 	background-color: orange;
+}
+.header .auth{
+	float: right;
 }
 .activity_feed{
 	width: 250px;

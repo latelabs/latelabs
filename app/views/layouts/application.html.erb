@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<header>
+<div class="header">
 	<div class="auth">
 		<% if user_signed_in? %>
  		  <%= link_to current_user.user_name, '/'  %> |
@@ -20,10 +20,13 @@
 		  <%= link_to "Login", new_user_session_path %>
 		<% end %>
 	</div>
-</hearder>
+</div>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<div class="flash">
+<% flash.each do |name, msg| %>
+	<%= content_tag :div, msg, id: "flash_#{name}" %>
+<% end %>
+</div>
 
 <%= yield %>
 <%= debug(params) if Rails.env.development? %>
