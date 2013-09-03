@@ -1,18 +1,21 @@
-<div class="newmessage">
-    <br>
-<strong><h2>New Message</h2></center></strong>
+<h2>New Message</h2>
 
  <%= form_for @message do |f| %>
-  <%= f.hidden_field :user_reciever %>
+  <%= f.hidden_field :user_receiver %>
+  <%= f.hidden_field :user_sender%>
+  <%= f.hidden_field :project_id %>
   <br>
-  <%= f.text_field :subject %>
+  <%= f.text_field :title %>
   <%= f.label :subject %>
     <br>
   <%= f.text_area :body %>
   <%= f.label :body %>
   <br>
   <br>
-  <center><%= f.submit %></center>
+  <%= f.submit %>
 <% end %>
-</div>
+
+<hr>
+<%= @message.inspect %>
+<%= params.inspect %>
 

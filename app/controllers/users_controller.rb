@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     	@user = User.find params[:id]
 		end
 		
-		@api_data = []
+		@api_activity = []
 
 		unless @user.hireable.nil?
 
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 			@api_activity = github.activity.events.performed current_user.user_name, :public => true
 			
 			#binding.pry
-						
+
 			# projects_url = @user.gh_repos
 			# @projects_api = JSON.load(open(projects_url))
 

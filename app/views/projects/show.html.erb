@@ -11,3 +11,16 @@
 	<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
 </ul>
 </div>
+
+<% unless current_user.id == @project.user_id %>
+
+<a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a>
+
+<%#= link_to('Message Project Owner', new_message_path(@project.user_id)) %>
+
+<% end %>
+<hr>
+
+	<%= @project.inspect %>
+
+

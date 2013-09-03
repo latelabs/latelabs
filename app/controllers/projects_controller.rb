@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 
 		@project = Project.new
 		@projects_api = []	
+		@user = current_user
 		
 		unless User.find(current_user.id).hireable.nil?
 

@@ -41,6 +41,9 @@ GEM
       rake
     arel (3.0.2)
     bcrypt-ruby (3.1.1)
+    better_errors (0.9.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
     builder (3.0.4)
     choice (0.1.6)
     coderay (1.0.9)
@@ -181,6 +184,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  better_errors
   coffee-rails (~> 3.2.1)
   devise
   github_api

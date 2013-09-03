@@ -30,8 +30,9 @@ class User < ActiveRecord::Base
 	has_many :applied_projects, :through => :applications, :source => :project
 	has_many :contributing_projects, :through => :contributions, :source => :project
 	has_many :stared_projects, :through => :stars, :source => :project
-	has_many :messages
-	has_many :skills, :through => :skillsets
+	has_many :messages_sent, :class_name => "Message", :foreign_key => "user_sender"
+  has_many :messages_received, :class_name => "Message", :foreign_key => "user_receiver"	
+  has_many :skills, :through => :skillsets
 	has_many :skillsets, :as => :skillable
  
  	validates_presence_of :user_name

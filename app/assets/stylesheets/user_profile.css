@@ -1,9 +1,15 @@
 ul{
 	list-style-type: none;
 }
+.messages{
+	margin-top: 100px;
+}
 .project_form{
 	padding-top: 100px;
 	padding-left: 20px;
+}
+.message_show{
+	padding-top: 100px;
 }
 .row .span5 .new_project{
 text-align: center;

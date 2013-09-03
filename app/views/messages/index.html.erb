@@ -1,0 +1,36 @@
+<div class="messages">
+
+<!-- 	Received: (<%#= current_user.messages_received.count %>)
+	<%# current_user.messages_received.reverse.each do |m| %>
+	<ul>
+		<li><%#= m.title %></li>
+	</ul>
+	<%# end %>
+
+<hr>
+
+	Sent: (<%#= current_user.messages_sent.count %>)</h4>
+	<%# current_user.messages_sent.reverse.each do |m| %>
+	<ul>
+		<li><%#= m.title %></li>
+	</ul>
+	<%# end %>
+
+<hr> -->
+
+	<%= current_user.user_name %>'s Inbox
+	<br>
+	total count: (<%= current_user.messages_received.count %>)
+	<br>
+	<% current_user.messages_received.reverse.each do |m| %>
+	<ul>
+		<%= m.user_sender %>
+		<li><a href='/messages/<%= m.id%>'> <%= m.title %> </a></li>
+	</ul>
+	<br>
+	<% end %>
+
+</div>
+
+<hr>
+<%= @message.inspect %>

@@ -18,6 +18,8 @@
   <br>
   <%= f.text_field :skill %>
   <%= f.label :skills %>
+  <%= f.hidden_field :user_id, :value => @user.id %>
+
   <br>
   <%#= f.text_field :contributors_link %>
   <%#= f.label :contributors %>
