@@ -1,12 +1,13 @@
-
+<div class="show_project">
 <ul>
-<li><%= @project.title %></li>
-<li><%= link_to('code', @project.code_repository_link) %></li>
-<li><%= @project.explanation %></li>
-<li><%= @project.skill %></li>
-<li><%= @project.contributors_link %></li>
+	<li><%= @project.title %></li>
+	<li><%= link_to('code', @project.code_repository_link) %></li>
+	<li><%= @project.explanation %></li>
+	<li><%= @project.skill %></li>
+	<li><%= @project.contributors_link %></li>
 </ul>
 <ul>
-<li><%= link_to('Edit', edit_project_path(@project)) %></li>
-<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
+	<li><%= link_to('Edit', edit_project_path(@project)) %></li>
+	<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
 </ul>
+</div>

@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 gem 'mail'
+gem 'github_api'
 
 group :production do
 	gem 'pg'

@@ -16,6 +16,7 @@ class CreateUsers < ActiveRecord::Migration
     	t.string :gh_orgs
     	t.string :gh_repos
     	t.boolean :hireable
+        t.string :token
     	
       t.timestamps
     end

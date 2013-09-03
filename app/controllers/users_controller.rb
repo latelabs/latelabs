@@ -3,24 +3,25 @@ class UsersController < ApplicationController
 
 	def show
 		
-		if params[:id].nil? # if there is no user id in params, show current one
+		if params[:id].nil? 
     	@user = current_user
-		else # if there is the user id in params just use it, 
-    	# maybe get 'authorization failed'
+		else 
     	@user = User.find params[:id]
 		end
-
-		@activity_api = []
+		
+		@api_data = []
 
 		unless @user.hireable.nil?
 
-			events_url = @user.gh_events.gsub("{/privacy}", "")
-			@activity_api = JSON.load(open(events_url))
+			github = Github.new oauth_token: @user.token
+			@api_activity = github.activity.events.performed current_user.user_name, :public => true
 			
-			projects_url = @user.gh_repos
-			@projects_api = JSON.load(open(projects_url))
-			# UserMailer.registration_confirmation(@user).deliver
+			#binding.pry
+						
+			# projects_url = @user.gh_repos
+			# @projects_api = JSON.load(open(projects_url))
 
+			# UserMailer.registration_confirmation(@user).deliver
 		end
 
 	end

@@ -12,8 +12,13 @@ class ProjectsController < ApplicationController
 		@projects_api = []	
 		
 		unless User.find(current_user.id).hireable.nil?
-			projects_url = current_user.gh_repos
-			@projects_api = JSON.load(open(projects_url))
+
+			github = Github.new oauth_token: current_user.token
+			@projects_api = github.repos.list
+			# binding.pry
+			# github.repos.collaborators.list 'elof', 'second-hand-startup' (for collaborators)
+			# projects_url = current_user.gh_repos
+			# @projects_api = JSON.load(open(projects_url))
 		end
 
 	end

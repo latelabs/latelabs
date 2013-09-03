@@ -1,25 +1,37 @@
 ul{
 	list-style-type: none;
 }
-.header{
-	padding:25px 0;
+.project_form{
+	padding-top: 100px;
+	padding-left: 20px;
+}
+.row .span5 .new_project{
+text-align: center;
+}
+.row .span5{
+	float: left;
+	padding-top: 55px;
+}
+.row .span5 .user_info{
+/*	background-color: blue;
+	position: fixed;*/
+	padding-right: 25px;
+}
+.navbar.navbar-fixed-top{
+	padding: 18px 0;
 	background-color: orange;
 }
-.header .auth{
+.navbar.navbar-fixed-top .auth{
 	float: right;
 }
-.activity_feed{
-	width: 250px;
+.flash{
+	text-align: center;
+	color: red;
 }
-.activity_feed ul{
-	width: 200px;
-}
-.activity_feed ul li{
-	width: 200px;
-}
-
-
 .show_projects{
 	margin-left: 20px;
 	float:left;
+}
+.show_project{
+	margin-top: 80px;
 }

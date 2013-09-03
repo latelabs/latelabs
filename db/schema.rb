@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20130828235411) do
     t.string   "gh_orgs"
     t.string   "gh_repos"
     t.boolean  "hireable"
+    t.string   "token"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "encrypted_password",     :default => "", :null => false

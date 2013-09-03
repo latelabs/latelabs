@@ -1,17 +1,14 @@
 <div class="show_projects">
-
-<% @projects_api.each do |project| %>
-	<ul class="project">	
-	<li class="title"><%= project['name'] %></li>
-	<li class="code"><%= project['html_url'] %></li>
-	<li class="skills"><%= project['languages_url'] %></li>
-	<li class="contributors"><%= project['contributors_url'] %></li>
-
-	</ul>
-<% end %>
-
+	<% @projects_api.each do |project| %>
+		<ul class="project">	
+			<li class="title"><%= project.name %></li>
+			<li class="code"><%= project.html_url %></li>
+			<li class="skills"><%= project.language %></li>
+			<!-- <li class="contributors"><%#= project.contributors_url %></li> -->
+		</ul>
+	<% end %>
 </div>
-
+<div class="project_form">
 <%= form_for @project do |f| %>
   <%= f.text_field :title, :autofocus => true %>
   <%= f.label :title %>
@@ -22,9 +19,10 @@
   <%= f.text_field :skill %>
   <%= f.label :skills %>
   <br>
-  <%= f.text_field :contributors_link %>
-  <%= f.label :contributors %>
-  <br>
+  <%#= f.text_field :contributors_link %>
+  <%#= f.label :contributors %>
+  <!-- <br> -->
   <p><p>
   <%= f.submit  class: "btn btn-primary" %>
 <% end %>
+</div>

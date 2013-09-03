@@ -1,32 +1,40 @@
-<div class="user_info">
-<ul>
-<li><img src="http://www.gravatar.com/avatar/<%= @user.gravartar_id %>"/></li>
-<li>Username: <%= @user.user_name %></li>
-<li>Location: <%= @user.location %></li>
-<li>GitHub Followers:<%= @user.gh_followers %></li>
-<li>Following on GitHub:<%= @user.gh_following %></li>
-<li>Public Repos on Github: <%= @user.gh_public_repos %></li>
-<li>Private Repost on Github<%= @user.gh_private_repos %></li>
-<li># of Collaborators on Public Projects:<%= @user.gh_collaborators %></li>
-</ul>
-</div>
+<div class="row">
 
-<%= link_to "New Project", :controller => "projects", :action => "new" %>
+	<div class="span5">
 
+		<div class="user_info">
+			<br>
+			<ul>
+				<li><img src="http://www.gravatar.com/avatar/<%= @user.gravartar_id %>"/></li>
+				<li>Username: <%= @user.user_name %></li>
+				<li>Location: <%= @user.location %></li>
+				<br>
+				<li>GitHub Information</li>
+				<li>Followers: <%= @user.gh_followers %></li>
+				<li>Following: <%= @user.gh_following %></li>
+				<li>Public Repos: <%= @user.gh_public_repos %></li>
+				<li>Private Repos: <%= @user.gh_private_repos %></li>
+			</ul>
+		</div>
 
-<% @activity_api.each do |event| %>
+		<div class="new_project">
+			<%= link_to "New Project", :controller => "projects", :action => "new" %>
+		</div>
+
 <div class="activity_feed">
- <ul>	
-<li><%= event['type'] %></li>
-<li><%= event['repo']['name'] %></li>
+			<% @api_activity.each do |activity| %>
+				<ul>
+			  <li><%= activity.type %></li>
+			  <li><%= activity.name %></li>
+			  <li><%= activity.description %></li>
+			  <li><%= activity.created_at %></li>
+			  </ul>
+			<% end %>				
+		</div>
+	</div>
 
-<%# event['payload']['commits'].each do |comment| %>
-	<%#= comment['message'] %>
-<%# end %>	
-
-<li><%= event['created_at'] %></li>
-</ul>
+	<div class="span7">
+		
+	</div>
 </div>
-<% end %>
 
-</div>
