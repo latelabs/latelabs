@@ -24,8 +24,9 @@
 	<br>
 	<% current_user.messages_received.reverse.each do |m| %>
 	<ul>
-		<%= m.user_sender %>
+		<li> from: <%= @sender_name %></li>
 		<li><a href='/messages/<%= m.id%>'> <%= m.title %> </a></li>
+		<%#= link_to  %>
 	</ul>
 	<br>
 	<% end %>

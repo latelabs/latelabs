@@ -1,6 +1,11 @@
 class MessagesController < ApplicationController
 	before_filter :authenticate_user!
 
+  def index
+    # sender = User.find(@message.user_sender)
+    # @sender_name = sender.user_name
+  end
+
 	def new
 	@message = Message.new()
 	@message.user_receiver = params[:user_receiver]
@@ -11,13 +16,22 @@ class MessagesController < ApplicationController
   def create
    @message = Message.new(params[:message])
    @message.sender = current_user
-    @message.save
+   @message.save
     # flash[:notice] = "Message Sent"
      redirect_to '/'
   end
 
   def show #get request, read one object
     @message = Message.find(params[:id])
-    # sender = User.find(@message.user_sender)
+    @users_messages = current_user.messages_received
+    project_messages = Message.where(:project_id => @project_id)
+    sender = User.find(@message.user_sender)
+    @sender_id = sender.id
+    @sender_name = sender.user_name
+    project = Project.find(@message.project_id)
+    @project_id = project.id
+    @project_name = project.title
+    @messages = project_messages.where("user_sender = ? or user_sender = ?", @sender_id, current_user.id)
+ #binding.pry
   end
 end

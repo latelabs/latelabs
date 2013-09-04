@@ -8,6 +8,8 @@
 #  explanation          :text
 #  skill                :string(255)
 #  code_repository_link :string(255)
+#  contributors_link    :string(255)
+#  gh_repos             :string(255)
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #

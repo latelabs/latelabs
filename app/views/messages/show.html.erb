@@ -1,13 +1,27 @@
 <div class="message_show"></div>
-<%= @message.title %>
+Messages for <%= @project_name %>
 <br>
-sent at: <%= @message.created_at %>
 <br>
-message: <%= @message.body %>
+Sent by: <%= @sender_name %>
+<br>
+Subject: <%= @message.title %>
+<br>
+<br>
+Message: <%= @message.body %>
+<br>
+Sent at: <%= @message.created_at %>
+<br>
+<a href='/messages/new/?user_receiver=<%= @message.user_sender %>&project_id=<%= @message.project_id %>&message_id=<%= @message.id %>'>Reply</a>
 <hr>
-<a href='/messages/new/?user_receiver=<%=@message.user_sender %>'><button>Reply</button></a>
-<hr>
-</div>
 
-<%= @message.inspect %>
-<%= @project.inspect %>
+<% @messages.each do |m| %>
+	<ul>
+<li>Sent by <%= @sender_name %> about the <%= @project_name %> project.</li>
+<li><%= m.title %></li>
+<li><%= m.body %></li>
+	</ul>
+<% end %>
+<%= @messages.inspect %><br>
+<%= params.inspect %><br>
+<%= @message.inspect %><br>
+

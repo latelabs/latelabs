@@ -14,6 +14,9 @@
 
 <% unless current_user.id == @project.user_id %>
 
+<!-- trying to build out more rail'sy routes -->
+<%#= link_to "Message Project Owner", controller: "messages", id: "new", path(user_receiver: @project.user_id, project_id: @project.id) %>
+
 <a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a>
 
 <%#= link_to('Message Project Owner', new_message_path(@project.user_id)) %>

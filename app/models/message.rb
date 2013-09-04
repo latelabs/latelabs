@@ -2,14 +2,14 @@
 #
 # Table name: messages
 #
-#  id             :integer          not null, primary key
-#  user_sender    :integer
-#  user_receivers :integer
-#  project_id     :integer
-#  title          :string(255)
-#  body           :text
-#  created_at     :datetime         not null
-#  updated_at     :datetime         not null
+#  id            :integer          not null, primary key
+#  user_sender   :integer
+#  user_receiver :integer
+#  project_id    :integer
+#  title         :string(255)
+#  body          :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
 #
 
 class Message < ActiveRecord::Base
