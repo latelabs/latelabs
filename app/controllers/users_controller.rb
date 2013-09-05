@@ -9,6 +9,8 @@ class UsersController < ApplicationController
     	@user = User.find params[:id]
 		end
 		
+		@skillset = @user.skillsets.build
+
 		@api_activity = []
 
 		unless @user.hireable.nil?

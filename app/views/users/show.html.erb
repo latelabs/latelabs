@@ -42,7 +42,10 @@
 		  <li><%= p.title %></li>
 		  <li><%= p.explanation %></li>
 		  </ul>
-		<% end %>				
+		<% end %>
+		<% unless current_user.id != @user.id %>
+			<%= render 'skills' %>
+		<% end %>
 	</div>
 </div>
 
