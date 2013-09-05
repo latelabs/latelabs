@@ -1,25 +1,35 @@
 <div class="show_project">
-<ul>
-	<li><%= @project.title %></li>
-	<li><%= link_to('code', @project.code_repository_link) %></li>
-	<li><%= @project.explanation %></li>
-	<li><%= @project.skill %></li>
-	<li><%= @project.contributors_link %></li>
-</ul>
-<ul>
-	<li><%= link_to('Edit', edit_project_path(@project)) %></li>
-	<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
-</ul>
+	<ul>
+		<li><%= @project.title %></li>
+		<li><%= link_to('code', @project.code_repository_link) %></li>
+		<li><%= @project.explanation %></li>
+		<li><%= @project.skill %></li>
+		<li><%= @project.contributors_link %></li>
+	</ul>
+<% unless current_user.id != @project.user_id %>	
+	<ul>
+		<li><%= link_to('Edit', edit_project_path(@project)) %></li>
+		<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
+	</ul>
 </div>
+	<%= "Add one skill at a time" %>
+	<%= form_for :skill, :url => skills_path, :html => {:method => :post} do |f| %>
+	   <%= f.text_field :skill, :autofocus => true %>
+	  <br>
+	   <%= f.submit  class: "btn btn-primary" %>
+	<% end %>
+<% end %>
 
 <% unless current_user.id == @project.user_id %>
+	<!-- trying to build out more rail'sy routes -->
+	<%#= link_to "Message Project Owner", controller: "messages", id: "new", path(user_receiver: @project.user_id, project_id: @project.id) %>
+	<a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a>
 
-<!-- trying to build out more rail'sy routes -->
-<%#= link_to "Message Project Owner", controller: "messages", id: "new", path(user_receiver: @project.user_id, project_id: @project.id) %>
-
-<a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a>
-
-<%#= link_to('Message Project Owner', new_message_path(@project.user_id)) %>
+	<% unless already_following %>
+		<%= button_to "Follow", :controller => "stars", :action => "create", :project_id => @project.id %>
+	<% else %>
+		<%= "Pretty Picture!" %>
+	<% end %>
 
 <% end %>
 <hr>

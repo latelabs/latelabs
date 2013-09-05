@@ -6,7 +6,7 @@ Sent by: <%= @sender_name %>
 <br>
 Subject: <%= @message.title %>
 <br>
-<br>
+<br>`
 Message: <%= @message.body %>
 <br>
 Sent at: <%= @message.created_at %>
@@ -15,11 +15,11 @@ Sent at: <%= @message.created_at %>
 <hr>
 
 <% @messages.each do |m| %>
-	<ul>
-<li>Sent by <%= @sender_name %> about the <%= @project_name %> project.</li>
-<li><%= m.title %></li>
-<li><%= m.body %></li>
-	</ul>
+<ul>
+	<li>Sent by <%= m.sender.user_name %> about the <%= @project_name %> project.</li>
+	<li><%= m.title %></li>
+	<li><%= m.body %></li>
+</ul><% binding.pry %>
 <% end %>
 <%= @messages.inspect %><br>
 <%= params.inspect %><br>

@@ -23,15 +23,14 @@ class MessagesController < ApplicationController
 
   def show #get request, read one object
     @message = Message.find(params[:id])
-    @users_messages = current_user.messages_received
-    project_messages = Message.where(:project_id => @project_id)
-    sender = User.find(@message.user_sender)
-    @sender_id = sender.id
-    @sender_name = sender.user_name
     project = Project.find(@message.project_id)
+    sender = User.find(@message.user_sender)
     @project_id = project.id
     @project_name = project.title
+    @users_messages = current_user.messages_received
+    project_messages = Message.where(:project_id => @project_id)
+    @sender_id = sender.id
+    @sender_name = sender.user_name
     @messages = project_messages.where("user_sender = ? or user_sender = ?", @sender_id, current_user.id)
- #binding.pry
   end
 end

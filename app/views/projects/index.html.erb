@@ -1,6 +1,8 @@
+<div class="projects_index">
 <% @project.each do |project| %>
 	<ul>
-	<li><%= project.title %></li>
+	<li><%= link_to project.title %></li>
 	<li><%= project.explanation %></li>
 	</ul>
 <% end %>
+</div>

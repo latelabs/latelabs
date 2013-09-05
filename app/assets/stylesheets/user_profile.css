@@ -1,22 +1,28 @@
 ul{
 	list-style-type: none;
 }
+.body_yeild{
+	padding-top: 60px;
+}
 .messages{
-	margin-top: 100px;
+	
 }
 .project_form{
-	padding-top: 100px;
+	
 	padding-left: 20px;
 }
+.projects_index{
+	
+}
 .message_show{
-	padding-top: 100px;
+	
 }
 .row .span5 .new_project{
 text-align: center;
 }
 .row .span5{
 	float: left;
-	padding-top: 55px;
+
 }
 .row .span5 .user_info{
 /*	background-color: blue;
@@ -39,5 +45,5 @@ text-align: center;
 	float:left;
 }
 .show_project{
-	margin-top: 80px;
+
 }

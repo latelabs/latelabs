@@ -3,7 +3,7 @@
 		<ul class="project">	
 			<li class="title"><%= project.name %></li>
 			<li class="code"><%= project.html_url %></li>
-			<li class="skills"><%= project.language %></li>
+			<li class="skills"><%#= project.language %></li>
 			<!-- <li class="contributors"><%#= project.contributors_url %></li> -->
 		</ul>
 	<% end %>
@@ -15,16 +15,11 @@
   <br>
   <%= f.text_field :code_repository_link %>
   <%= f.label :code %>
-  <br>
-  <%= f.text_field :skill %>
-  <%= f.label :skills %>
-  <%= f.hidden_field :user_id, :value => @user.id %>
 
-  <br>
-  <%#= f.text_field :contributors_link %>
-  <%#= f.label :contributors %>
-  <!-- <br> -->
+  <%= f.hidden_field :user_id, :value => @user.id %>
   <p><p>
   <%= f.submit  class: "btn btn-primary" %>
 <% end %>
 </div>
+
+

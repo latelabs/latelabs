@@ -7,7 +7,6 @@ class ProjectsController < ApplicationController
 	end
 
 	def new
-
 		@project = Project.new
 		@projects_api = []	
 		@user = current_user

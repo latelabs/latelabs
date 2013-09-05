@@ -5,7 +5,13 @@ Latelabs::Application.routes.draw do
 
   resources :users, :projects, :messages
 
+  post "/stars" => "stars#create"
+
+  post "/skills" => "skills#create"
+
   root :to => "users#show"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
