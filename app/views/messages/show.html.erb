@@ -19,7 +19,7 @@ Sent at: <%= @message.created_at %>
 	<li>Sent by <%= m.sender.user_name %> about the <%= @project_name %> project.</li>
 	<li><%= m.title %></li>
 	<li><%= m.body %></li>
-</ul><% binding.pry %>
+</ul>
 <% end %>
 <%= @messages.inspect %><br>
 <%= params.inspect %><br>

@@ -1,0 +1,7 @@
+<%= "Add one skill at a time" %>
+	<%= form_for [@skillable, @skill] do |f| %>
+	   <%= f.text_field :skill, :autofocus => true %>
+	   <%#= f.hidden_field :user_id, :value => :user_id %>
+	  <br>
+	   <%= f.submit  class: "btn btn-primary" %>
+	<% end %>

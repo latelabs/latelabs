@@ -4,7 +4,15 @@ Latelabs::Application.routes.draw do
                      controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   resources :users, :projects, :messages
-
+  
+  resources :projects do
+    resources :skills
+  end
+  
+  resources :users do
+    resources :skills
+  end
+  
   post "/stars" => "stars#create"
 
   post "/skills" => "skills#create"

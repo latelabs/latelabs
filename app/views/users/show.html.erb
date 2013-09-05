@@ -36,7 +36,15 @@
 	</div>
 
 	<div class="span7">
-		
+
+		<% @user.projects.each do |p| %>
+			<ul>
+		  <li><%= p.title %></li>
+		  <li><%= p.explanation %></li>
+		  </ul>
+		<% end %>				
 	</div>
 </div>
+
+
 

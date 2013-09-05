@@ -12,12 +12,7 @@
 		<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
 	</ul>
 </div>
-	<%= "Add one skill at a time" %>
-	<%= form_for :skill, :url => skills_path, :html => {:method => :post} do |f| %>
-	   <%= f.text_field :skill, :autofocus => true %>
-	  <br>
-	   <%= f.submit  class: "btn btn-primary" %>
-	<% end %>
+<%= render 'skills' %>
 <% end %>
 
 <% unless current_user.id == @project.user_id %>
