@@ -1,30 +1,30 @@
 class SkillsController < ApplicationController
 
-  before_filter :load_skillable
+#   before_filter :load_skillable
   
-  def index
-    @skills = @skillable.skills
-  end
+#   def index
+#     @skills = @skillable.skills
+#   end
 
-  def new
-    @skill = @skillable.skillable.new
-  end
+#   def new
+#     @skill = @skillable.skillable.new
+#   end
 
-  def create
-    @skill = @skillable.skills.new(params[:comment])
-    if @skill.save
-      redirect_to project_path(@project_id), notice: "Comment created."
-    else
-      render :new
-    end
-  end
+#   def create
+#     @skill = @skillable.skills.new
+#     if @skill.save
+#       redirect_to project_path(@project_id), notice: "Comment created."
+#     else
+#       render :new
+#     end
+#   end
 
-private
+# private
 
-  def load_skillable
-    resource, id = request.path.split('/')[1, 2]
-    @skillable = resource.singularize.classify.constantize.find(id)
-  end
+#   def load_skillable
+#     resource, id = request.path.split('/')[1, 2]
+#     @skillable = resource.singularize.classify.constantize.find(id)
+#   end
 	# def create
 	# 	@skill = Skill.create
 	# 	binding.pry

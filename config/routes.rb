@@ -3,7 +3,7 @@ Latelabs::Application.routes.draw do
   devise_for :users, path_names: {sign_in: "gitin", sign_out: "destroy"},
                      controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-  resources :users, :projects, :messages
+  resources :users, :projects, :messages, :skillsets
   
   resources :projects do
     resources :skills
@@ -12,7 +12,7 @@ Latelabs::Application.routes.draw do
   resources :users do
     resources :skills
   end
-  
+
   post "/stars" => "stars#create"
 
   post "/skills" => "skills#create"

@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
 	def show
 		
 		@project = Project.find(params[:id])
-		
+		@skillset = @project.skillsets.build
 		@skills_api = []
 
 		unless User.find(current_user.id).hireable.nil?

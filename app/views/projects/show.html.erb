@@ -12,7 +12,9 @@
 		<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
 	</ul>
 </div>
+
 <%= render 'skills' %>
+
 <% end %>
 
 <% unless current_user.id == @project.user_id %>

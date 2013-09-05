@@ -11,9 +11,10 @@
 #
 
 class Skillset < ActiveRecord::Base
- 
-belongs_to :skill
- 
+attr_accessible :skillable_id, :skillable_type
+
+belongs_to :skill 
+
 belongs_to :skillable, :polymorphic => true
- 
+  
 end
