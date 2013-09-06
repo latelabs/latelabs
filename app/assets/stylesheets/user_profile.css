@@ -49,24 +49,33 @@ margin-top: 21px;
 .project_form{
 	margin-left: 20px;
 }
-.row .span5 .new_project{
-	text-align: center;
+.container-fluid .row-fluid .span4 .user_info{
+
 }
-.row .span5{
+.container-fluid .row-fluid .span4{
 	float: left;
+	margin-left: 120px;
 }
-.row .span5 .user_info{
-	padding-right: 25px;
+.container-fluid .row-fluid .span4 .skills_container{
+	margin-left: 25px;
+	margin-top: 50px;
+}
+.container-fluid .row-fluid .span4 .projects_container{
+	margin-left: 25px;
+	margin-top: 70px;
+}
+.container-fluid .row-fluid .span4 .projects_container #new_skillset{
+	margin-top: 70px;
+}
+
+.span4:nth-child(2) {
+	margin-top: 70px;
 }
 
 .flash{
 	text-align: center;
 	color: red;
 	padding-top: 60px;
-}
-.show_projects{
-	margin-left: 20px;
-	float:left;
 }
 .search .search_button{
 	display:none;
