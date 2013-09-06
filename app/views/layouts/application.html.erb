@@ -5,14 +5,13 @@
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
+	  <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,500,300italic,300' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-
-
-
  		<div class="navbar navbar-fixed-top">
+ 			<div class="logo"><%= image_tag "latelabsLogo.png" %></div>
  				<div class="search">
- 					<%= image_tag "latelabsLogo.png" %>
+
  				<%= form_tag skillsets_path, :method => 'get' do %>
 				<%= text_field_tag :search %>
 				<div class="search_button"><%= submit_tag "search" %></div>
@@ -21,7 +20,7 @@
 			<div class="auth">
 				<% if user_signed_in? %>
 		 		  <%= link_to current_user.user_name, user_path(current_user.id)  %> |
-		 		  Messages: <%= link_to current_user.messages_received.count, '/messages'  %> |
+		 		  <span class="mail_image"><%= image_tag "mail.png" %></span> <%= link_to current_user.messages_received.count, '/messages'  %> |
 		 		  <%= link_to 'Edit profile', edit_user_registration_path %> |
 				  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 				<% else %>

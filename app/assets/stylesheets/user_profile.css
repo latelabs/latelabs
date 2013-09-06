@@ -1,37 +1,53 @@
 ul{
 	list-style-type: none;
 }
-.messages{
-	
+body{
+background-color: rgb(248, 248, 248);
+}
+.logo{
+	position: fixed;
+	margin-left: 100px;
+}
+.navbar.navbar-fixed-top{
+	background-color: rgb(254, 116, 0);
+	font-family: 'Roboto', sans-serif;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+.navbar.navbar-fixed-top .auth{
+	float: right;
+	line-height: 64px;
+	padding-right: 100px;
+	color: white;
+}
+.navbar.navbar-fixed-top .logo img{
+	margin-top: 16px;	
+}
+.navbar.navbar-fixed-top .search{
+	float: left;
+	margin-left: 300px;
+}
+.navbar.navbar-fixed-top .search #search{
+margin-top: 21px;
+}
+.navbar.navbar-fixed-top .auth .mail_image img{
+	height: 12px;
+	width:18px;
+	margin-top: -2px;
+	margin-right: 1px;
 }
 .project_form{
-	
-	padding-left: 20px;
-}
-.projects_index{
-	
-}
-.message_show{
-	
+	margin-left: 20px;
 }
 .row .span5 .new_project{
 text-align: center;
 }
 .row .span5{
 	float: left;
-
 }
 .row .span5 .user_info{
-
 	padding-right: 25px;
 }
-.navbar.navbar-fixed-top{
-	padding: 18px 0;
-	background-color: rgb(254, 116, 0);
-}
-.navbar.navbar-fixed-top .auth{
-	float: right;
-}
+
 .flash{
 	text-align: center;
 	color: red;
@@ -39,9 +55,6 @@ text-align: center;
 }
 .show_projects{
 	margin-left: 20px;
-	float:left;
-}
-.search{
 	float:left;
 }
 .search .search_button{

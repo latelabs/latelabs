@@ -1,3 +1,277 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+a:link,a:visited,a:active {
+	color:#383838;text-decoration:none;
+}
+
+a:hover {
+	color:#999;
+}
+
+ul, li {
+	list-style: none;
+}
+
+html {
+	font-size: 16px;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, li, p {
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+	font-size: 13px;
+	color: #6b6b6b;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+}
+
+
+/*----- HEADER ------*/
+
+.center {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.header {
+	height: 69px; /* 57px/10px */;
+	background: url(#) repeat-x;
+	z-index:9;
+}
+.Gokrt {
+	padding-top: 0px; /* 8px/10px */;	
+	padding-left: 25px;
+
+}
+.Gokrt a {
+	text-align: center;
+	display: block;
+	text-indent: -99999999px;
+	background: url(images/latelabsLogo.png) no-repeat;
+}
+
+.top_nav {
+	float: right;
+	z-index: 99999999;
+}
+
+.top_nav li {
+	float: left;
+	position: relative;
+	z-index: 9999;
+}
+
+.top_nav a {
+	float: left;
+	height: 47px;
+	font-size: 13px;
+	color: #fff;
+	font-weight: bold;
+	font-family: helvetica-bold, sans-serif;
+	text-decoration: none;
+	z-index: 999;
+}
+
+.top_nav a:hover {
+	float: left;
+	height: 40px;
+	font-size: 13px;
+	color: #333;
+	font-weight: bold;
+	font-family: arial-bold, sans-serif;
+	text-decoration: none;
+	z-index: 999;
+}
+
+.top_nav a span {
+	height: 56px;
+	line-height: 56px;
+	display: block;
+	padding: 0 0px;
+	float: left;
+	z-index: 999;
+	color: #fff;
+}
+
+.top_nav a span:hover {
+	height: 56px;
+	line-height: 56px;
+	display: block;
+	padding: 0 0px;
+	float: left;
+	z-index: 999;
+	color: #414141;
+}
+
+.top_nav a.submenu span{
+	padding: 0 28px 0 17px;
+	margin-top: 0px;
+	z-index: 99999;
+	color: #eb7c20;
+}
+
+.top_nav a small {
+	background: url(images/arrow_down_orange.png);
+	width: 11px;
+	height: 6px;
+	display: block;
+	float: left;
+	margin: 25px 0 0 -22px;
+	z-index: 9999;
+}
+
+.top_nav a small:hover {
+	background: url(images/arrow_down_orange.png);
+	width: 11px;
+	height: 6px;
+	display: block;
+	float: left;
+	margin: 25px 0 0 -22px;
+	z-index: 9999;
+}
+
+/* submenu */
+
+.top_nav li:hover ul {
+	display: block;
+	z-index: 9999;
+}
+
+.top_nav ul {
+	position: absolute;
+	left: 0;
+	top: 45px;
+	z-index: 9999;
+	margin-left: -79px;
+	display: none;
+}
+
+.top_nav ul li a {
+	border: none;
+	height: 40px;
+	line-height: 40px;
+	font-size: 13px;
+	background: #dedede;
+	text-indent: 20px;
+	color: #777;
+	text-shadow: none;
+	display: block;
+	border-top: solid 2px #FFF;
+	z-index: 9999;
+	width: 160px;
+}
+
+
+/*------- END HEADER ------*/
+ 
+
+/*------- FOOTER -------*/
+
+#footer {
+	text-align: center;
+	font-size: 12px;
+	width: 840px;
+	margin-bottom: 25px;
+	line-height: 220%;
+}
+
+
+/*------- END FOOTER -------*/
+
+
+/*----- FEATURED -----*/
+
+
+#techcrunch {
+	background: url(images/techcrunch.png) no-repeat;
+	width: 161px;
+	height: 28px;
+	text-indent: -99999999px;
+}
+
+#venturebeat {
+	background: url(images/venturebeat.png) no-repeat;
+	width: 164px;
+	height: 21px;
+	text-indent: -99999999px;
+}
+
+#featured {
+	margin-top: 130px;
+	padding-top: 25px;
+	height: 55px;
+	width: 100%;
+	background: #f2f2f2;
+	
+}
+
+#featured a {
+	padding-left: 25px;
+	padding-right: 25px;
+	opacity: 0.6;
+}
+
+#featured a:hover {
+	padding-left: 25px;
+	padding-right: 25px;
+	opacity: 0.9;
+}
+
+#tech {
+	margin-left: -520px;
+}
+
+#cocktail {
+		margin-left: -170px;
+		margin-top: -40px;
+}
+
+#venture {
+		margin-left: 180px;
+		margin-top: -40px;
+}
+
+#pando {
+		margin-left: 570px;
+		margin-top: -30px;
+}
+
+/*----- FEATURED -----*/
+
+
+/*start-jlr*/
+
+
+.featured{
+    margin: 130px 0 50px 0;
+	background: #f2f2f2;
+	width: 100%;
+ 	height: 100px;
+}
+
+.featured ul {
+    list-style: none outside none;
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+}
+
+.featured ul li {
+	display:inline;
+	width:auto;
+	height:100px;
+	margin: 25px 25px 0 0;
+}
+.featured ul li a {
+line-height:100px;
+}
+.featured ul li a img {
+ 	vertical-align: middle;
+}
+
+/*end-jlr*/
