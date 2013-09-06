@@ -17,7 +17,7 @@ Latelabs::Application.routes.draw do
 
   post "/skills" => "skills#create"
 
-  root :to => "users#show"
+  root :to => "users#index"
 
 
 

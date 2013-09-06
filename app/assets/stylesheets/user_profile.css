@@ -1,9 +1,6 @@
 ul{
 	list-style-type: none;
 }
-.body_yeild{
-	padding-top: 60px;
-}
 .messages{
 	
 }
@@ -38,7 +35,7 @@ text-align: center;
 .flash{
 	text-align: center;
 	color: red;
-	padding-top: 100px;
+	padding-top: 60px;
 }
 .show_projects{
 	margin-left: 20px;
