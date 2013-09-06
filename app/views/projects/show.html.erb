@@ -1,3 +1,4 @@
+<div class="row-fluid">
 <div class="show_project">
 	<ul>
 		<li><%= @project.title %></li>
@@ -11,7 +12,7 @@
 		<li><%= link_to('Edit', edit_project_path(@project)) %></li>
 		<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
 	</ul>
-</div>
+
 
 <%= render 'skills' %>
 
@@ -35,8 +36,7 @@
 	<% end %>
 
 <% end %>
-<hr>
 
-	<%= @project.inspect %>
-
-
+	<%#= @project.inspect %>
+</div>
+</div>

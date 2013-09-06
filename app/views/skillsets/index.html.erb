@@ -1,3 +1,7 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span6">
+			<div class="user_skills">
 <% @user_skills.each do |s| %>
 	<% s.skill.users.each do |s| %>
 		<ul>
@@ -6,16 +10,23 @@
 		<li><%= link_to "View Profile", user_path(s.id) %></li>
 		</ul>
 	<% end %>
-<% end %><br>
-<hr>
+<% end %>
+</div>
+</div>
+		<div class="span6">
+			<div class="project_skills">
 <% @project_skills.each do |s| %>
 	<% s.skill.projects.each do |s| %>
 		<ul>
-		<li><%= s.title %></li>
+		<li><h1><%= s.title %></h1></li>
 		<li><%= link_to "Checkout Project", project_path(s.id) %></li>
+		<br><br>
 		</ul>
 	<% end %>
 <% end %>
-
+</div>
+</div>
+</div>
+</div>
 
 

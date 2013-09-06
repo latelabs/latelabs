@@ -68,6 +68,10 @@ margin-top: 21px;
 	margin-top: 70px;
 }
 
+.container-fluid .row-fluid li img{
+	height: 150px;
+	width: 150px;
+}
 .span4:nth-child(2) {
 	margin-top: 70px;
 }

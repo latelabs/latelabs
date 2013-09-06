@@ -1,4 +1,4 @@
-<h5><%= "Add one skill at a time" %></h5>
+<h5><%= "Add a Skill" %></h5>
 	<%= form_for @skillset do |f| %>
 	   <%= text_field_tag "skill[skill]", "", :autofocus => true %>
 	   <%= f.hidden_field :skillable_id %>

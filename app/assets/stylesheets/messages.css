@@ -1,3 +1,10 @@
 .message_show{
 	font-family: 'Roboto', sans-serif;
 }
+.container-fluid .row-fluid .span6 .user_skills{
+	float: left;
+	margin-left: 100px;
+}
+.container-fluid .row-fluid .span6 .project_skills{
+	margin-left: 500px;
+}
