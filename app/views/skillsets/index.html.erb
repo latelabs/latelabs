@@ -1,0 +1,23 @@
+<% @user_skills.each do |s| %>
+	<% s.skill.users.each do |s| %>
+		<ul>
+		<li><img src="http://www.gravatar.com/avatar/<%= s.gravartar_id %>"/></li>
+		<li><%= s.user_name %></li>
+		<li><%= link_to "View Profile", user_path(s.id) %></li>
+		</ul>
+	<% end %>
+<% end %><br>
+<hr>
+<% @project_skills.each do |s| %>
+	<% s.skill.projects.each do |s| %>
+		<ul>
+		<li><%= s.title %></li>
+		<li><%= link_to "Checkout Project", project_path(s.id) %></li>
+		</ul>
+	<% end %>
+<% end %><br><br>
+
+U: <%= @user_skills.inspect %><br><hr><br>
+P: <%= @project_skills.inspect %><br><br>
+
+

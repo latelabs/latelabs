@@ -25,7 +25,7 @@ text-align: center;
 
 }
 .row .span5 .user_info{
-	
+
 	padding-right: 25px;
 }
 .navbar.navbar-fixed-top{
@@ -38,11 +38,15 @@ text-align: center;
 .flash{
 	text-align: center;
 	color: red;
+	padding-top: 100px;
 }
 .show_projects{
 	margin-left: 20px;
 	float:left;
 }
-.show_project{
-
+.search{
+	float:left;
+}
+.search .search_button{
+	display:none;
 }

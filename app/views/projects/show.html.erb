@@ -17,6 +17,12 @@
 
 <% end %>
 
+<% @project.skills.each do |s| %>
+		<ul>
+	  <li><%= s.skill %></li>
+	  </ul>
+<% end %>
+
 <% unless current_user.id == @project.user_id %>
 	<!-- trying to build out more rail'sy routes -->
 	<%#= link_to "Message Project Owner", controller: "messages", id: "new", path(user_receiver: @project.user_id, project_id: @project.id) %>
@@ -25,7 +31,7 @@
 	<% unless already_following %>
 		<%= button_to "Follow", :controller => "stars", :action => "create", :project_id => @project.id %>
 	<% else %>
-		<%= "Pretty Picture!" %>
+		<%= "Following" %>
 	<% end %>
 
 <% end %>

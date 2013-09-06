@@ -16,13 +16,7 @@
 				<li>Private Repos: <%= @user.gh_private_repos %></li>
 			</ul>
 		</div>
-		
-<% unless current_user.id != @user.id %>	
-		<div class="new_project">
-			<%= link_to "New Project", :controller => "projects", :action => "new" %>
-		</div>
-<% end %>
-
+<hr>
 <div class="activity_feed">
 			<% @api_activity.each do |activity| %>
 				<ul>
@@ -36,7 +30,11 @@
 	</div>
 
 	<div class="span7">
-
+	<% unless current_user.id != @user.id %>	
+			<div class="new_project">
+				<%= link_to "New Project", :controller => "projects", :action => "new" %>
+			</div>
+	<% end %>
 		<% @user.projects.each do |p| %>
 			<ul>
 		  <li><%= p.title %></li>
@@ -44,7 +42,14 @@
 		  </ul>
 		<% end %>
 		<% unless current_user.id != @user.id %>
-			<%= render 'skills' %>
+			
+		<%= render 'skills' %>
+		<% @user.skills.each do |s| %>
+			<ul>
+		  <li><%= s.skill %></li>
+		  </ul>
+		<% end %>
+
 		<% end %>
 	</div>
 </div>
