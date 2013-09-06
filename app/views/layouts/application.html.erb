@@ -10,13 +10,26 @@
 	<body>
  		<div class="navbar navbar-fixed-top">
  			<div class="logo"><%= image_tag "latelabsLogo.png" %></div>
+ 			<% if user_signed_in? %>
  				<div class="search">
 
  				<%= form_tag skillsets_path, :method => 'get' do %>
 				<%= text_field_tag :search %>
 				<div class="search_button"><%= submit_tag "search" %></div>
-				<% end %>
 				</div>
+				<% end %>
+				<% else %>
+				<span class="signed-out-nav">
+					<ul>
+						<li>home</li>
+						<li>projects</li>
+						<li>about</li>
+						<li>blog</li>
+						<li>help</li>
+					</ul>
+				</span>
+			<% end %>
+				
 			<div class="auth">
 				<% if user_signed_in? %>
 		 		  <%= link_to current_user.user_name, user_path(current_user.id)  %> |
@@ -24,9 +37,9 @@
 		 		  <%= link_to 'Edit profile', edit_user_registration_path %> |
 				  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 				<% else %>
-				  <%= link_to "GitHub", user_omniauth_authorize_path(:github) %> |
-				  <%= link_to "Sign up", new_user_registration_path %> |
-				  <%= link_to "Login", new_user_session_path %>
+				  <%#= link_to "GitHub", user_omniauth_authorize_path(:github) %>
+				  <%= link_to "signin", new_user_session_path %> |
+					<%= link_to "join", new_user_registration_path %> 
 				<% end %>
 			</div>
 		</div>

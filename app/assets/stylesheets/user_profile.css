@@ -2,7 +2,7 @@ ul{
 	list-style-type: none;
 }
 body{
-background-color: rgb(248, 248, 248);
+	background-color: rgb(248, 248, 248);
 }
 .logo{
 	position: fixed;
@@ -13,6 +13,16 @@ background-color: rgb(248, 248, 248);
 	font-family: 'Roboto', sans-serif;
 	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
+.navbar.navbar-fixed-top .signed-out-nav ul li{
+	line-height: 64px;
+	color: white;
+	display: inline-block;
+	margin-right: 25px;
+}
+.navbar.navbar-fixed-top .signed-out-nav ul{
+	margin-left: 280px;
+	float: left;
+}
 .navbar.navbar-fixed-top .auth{
 	float: right;
 	line-height: 64px;
@@ -20,7 +30,8 @@ background-color: rgb(248, 248, 248);
 	color: white;
 }
 .navbar.navbar-fixed-top .logo img{
-	margin-top: 16px;	
+	margin-top: 16px;
+
 }
 .navbar.navbar-fixed-top .search{
 	float: left;
@@ -39,7 +50,7 @@ margin-top: 21px;
 	margin-left: 20px;
 }
 .row .span5 .new_project{
-text-align: center;
+	text-align: center;
 }
 .row .span5{
 	float: left;
