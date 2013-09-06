@@ -1,7 +1,5 @@
 <div class="row">
-
 	<div class="span5">
-
 		<div class="user_info">
 			<br>
 			<ul>
@@ -17,7 +15,7 @@
 			</ul>
 		</div>
 <hr>
-<div class="activity_feed">
+		<div class="activity_feed">
 			<% @api_activity.each do |activity| %>
 				<ul>
 			  <li><%= activity.type %></li>
@@ -29,28 +27,28 @@
 		</div>
 	</div>
 
-	<div class="span7">
+<div class="span7">
 	<% unless current_user.id != @user.id %>	
 			<div class="new_project">
 				<%= link_to "New Project", :controller => "projects", :action => "new" %>
 			</div>
 	<% end %>
-		<% @user.projects.each do |p| %>
-			<ul>
-		  <li><%= p.title %></li>
-		  <li><%= p.explanation %></li>
-		  </ul>
-		<% end %>
-		<% unless current_user.id != @user.id %>
-			
+	<% @user.projects.each do |p| %>
+		<ul>
+	  <li><%= p.title %></li>
+	  <li><%= p.explanation %></li>
+	  </ul>
+	<% end %>
+
+	<% unless current_user.id != @user.id %>
 		<%= render 'skills' %>
 		<% @user.skills.each do |s| %>
 			<ul>
 		  <li><%= s.skill %></li>
 		  </ul>
-		<% end %>
+	<% end %>
 
-		<% end %>
+<% end %>
 	</div>
 </div>
 

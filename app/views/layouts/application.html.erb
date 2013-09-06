@@ -12,6 +12,7 @@
 
  		<div class="navbar navbar-fixed-top">
  				<div class="search">
+ 					<%= image_tag "latelabsLogo.png" %>
  				<%= form_tag skillsets_path, :method => 'get' do %>
 				<%= text_field_tag :search %>
 				<div class="search_button"><%= submit_tag "search" %></div>
@@ -19,7 +20,7 @@
 				</div>
 			<div class="auth">
 				<% if user_signed_in? %>
-		 		  <%= link_to current_user.user_name, '/'  %> |
+		 		  <%= link_to current_user.user_name, user_path(current_user.id)  %> |
 		 		  Messages: <%= link_to current_user.messages_received.count, '/messages'  %> |
 		 		  <%= link_to 'Edit profile', edit_user_registration_path %> |
 				  <%= link_to "Logout", destroy_user_session_path, method: :delete %>

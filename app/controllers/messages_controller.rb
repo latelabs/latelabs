@@ -2,8 +2,7 @@ class MessagesController < ApplicationController
 	before_filter :authenticate_user!
 
   def index
-    # sender = User.find(@message.user_sender)
-    # @sender_name = sender.user_name
+
   end
 
 	def new
@@ -18,7 +17,7 @@ class MessagesController < ApplicationController
    @message.sender = current_user
    @message.save
     # flash[:notice] = "Message Sent"
-     redirect_to '/'
+     redirect_to user_path(current_user.id)
   end
 
   def show #get request, read one object

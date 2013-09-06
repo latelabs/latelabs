@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-	before_filter :authenticate_user!
+	before_filter :authenticate_user!, :only => [:show]
+	
+	def index
+		
+	end
 
 	def show
 		
@@ -18,12 +22,7 @@ class UsersController < ApplicationController
 			github = Github.new oauth_token: @user.token
 			@api_activity = github.activity.events.performed current_user.user_name, :public => true
 			
-			#binding.pry
-
-			# projects_url = @user.gh_repos
-			# @projects_api = JSON.load(open(projects_url))
-
-			# UserMailer.registration_confirmation(@user).deliver
+		# UserMailer.registration_confirmation(@user).deliver
 		end
 
 	end
