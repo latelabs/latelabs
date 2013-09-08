@@ -17,21 +17,21 @@
 	<%# end %>
 
 <hr> -->
-
-	<%= current_user.user_name %>'s Inbox
+<center>
+	<h1><%= current_user.user_name %>'s Inbox</h1>
 	<br>
-	total count: (<%= current_user.messages_received.count %>)
+	<h3>total count: (<%= current_user.messages_received.count %>)</h3>
 	<br>
 	<% current_user.messages_received.reverse.each do |m| %>
 	<ul>
-		<li> from: <%= @sender_name %></li>
-		<li><a href='/messages/<%= m.id%>'> <%= m.title %> </a></li>
+		<li> <h2>from: <%= @sender_name %></h2></li>
+		<hr><br>
+		<li><h2><a href='/messages/<%= m.id%>'> <%= m.title %> </a></h2></li>
 		<%#= link_to  %>
 	</ul>
-	<br>
+	
 	<% end %>
+</center>
 
-</div>
 
-<hr>
-<%= @message.inspect %>
+<%#= @message.inspect %>

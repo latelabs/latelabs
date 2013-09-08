@@ -1,13 +1,14 @@
+<center>
 <div class="message_show"></div>
-Messages for <%= @project_name %>
+<h1>Messages for <%= @project_name %></h1>
 <br>
 <br>
 Sent by: <%= @sender_name %>
 <br>
-Subject: <%= @message.title %>
+<h5>Subject: <%= @message.title %></h5>
 <br>
 <br>`
-Message: <%= @message.body %>
+<h3>Message: <%= @message.body %></h3>
 <br>
 Sent at: <%= @message.created_at %>
 <br>
@@ -17,11 +18,11 @@ Sent at: <%= @message.created_at %>
 <% @messages.each do |m| %>
 <ul>
 	<li>Sent by <%= m.sender.user_name %> about the <%= @project_name %> project.</li>
-	<li><%= m.title %></li>
-	<li><%= m.body %></li>
+	<li><h1><%= m.title %></h1></li>
+	<li><h3><%= m.body %></h3></li>
 </ul
 ><% end %>
-<%= @messages.inspect %><br>
-<%= params.inspect %><br>
-<%= @message.inspect %><br>
-
+<%#= @messages.inspect %><br>
+<%#= params.inspect %><br>
+<%#= @message.inspect %><br>
+</center>
