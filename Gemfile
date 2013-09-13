@@ -24,6 +24,7 @@ gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 gem 'mail'
 gem 'github_api'
 gem 'better_errors', :group => :development
+gem 'foreman'
 
 group :production do
 	gem 'pg'
