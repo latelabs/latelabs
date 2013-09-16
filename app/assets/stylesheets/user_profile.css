@@ -11,8 +11,8 @@ body{
 .navbar.navbar-fixed-top{
 	background-color: rgb(254, 116, 0);
 	font-family: 'Roboto', sans-serif;
-	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
-}
+/*	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+*/}
 .navbar.navbar-fixed-top .signed-out-nav ul li{
 	line-height: 64px;
 	color: white;
