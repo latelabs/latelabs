@@ -25,6 +25,7 @@ body{
 }
 .navbar.navbar-fixed-top .signed-out-nav ul li a:link, a:visited, a:hover, a:active{
 	color: white;
+	list-style: yes;
 }
 .navbar.navbar-fixed-top .signed-out-nav ul{
 	margin-left: 280px;

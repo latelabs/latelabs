@@ -1,3 +1,17 @@
+.container-fluid .row-fluid .span4 .skills_containder{
+	padding-top: 25px;
+}
+.container-fluid .row-fluid .span4 .skills_containder li a{
+color: rgb(107, 107, 107);
+}
+.container-fluid .row-fluid .span4 .skills_containder .new_project{
+background-color: rgb(0, 84, 174);
+padding:2px 3px;
+}
+.container-fluid .row-fluid .span4 .skills_containder .new_project a{
+color: white;
+}
+
 .show_project{
 	text-align: center;
 	margin-top: 50px;
