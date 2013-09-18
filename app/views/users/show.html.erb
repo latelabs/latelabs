@@ -5,25 +5,28 @@
 				<br>
 				<ul>
 					<li><img src="http://www.gravatar.com/avatar/<%= @user.gravartar_id %>"/></li>
-					<li><center><h1><%= @user.user_name %></h1></center></li>
-					<li>Location: <%= @user.location %></li>
+					<li><h1><%= @user.user_name %></h1></li>
+					<li><h3><%= @user.location %></h3></li>
 					<br>
-					<li>GitHub Information</li>
-					<li>Followers: <%= @user.gh_followers %></li>
-					<li>Following: <%= @user.gh_following %></li>
-					<li>Public Repos: <%= @user.gh_public_repos %></li>
-					<li>Private Repos: <%= @user.gh_private_repos %></li>
+					<li><h4>GitHub Information</h4></li>
+					<li><h4>Followers: <%= @user.gh_followers %></h4></li>
+					<li><h4>Following: <%= @user.gh_following %></h4></li>
+					<li><h4>Public Repos: <%= @user.gh_public_repos %></h4></li>
+					<li><h4>Private Repos: <%= @user.gh_private_repos %></h4></li>
 					<hr>
-					<li><%= "Other Projects  :  " %><%= current_user.stars.count %></li>
+					<li><span class="mail_image"><%= image_tag "mail.png" %></span> <%= link_to current_user.messages_received.count, '/messages'  %></li>
+					<li><%= "projects following  :  " %><%= current_user.stars.count %></li>
+
 				</ul>
 			</div>
 	<hr>
 	<div class="activity_feed">
+		<h3>Activity Feed</h3>
 		<% @api_activity.each do |activity| %>
 			<ul>
-		  <li><%= activity.type %></li>
-		  <li><%= activity.name %></li>
-		  <li><%= activity.description %></li>
+		  <li><h4><%= activity.type %></h4></li>
+		  <li><%#= activity.name %></li>
+		  <li><%#= activity.description %></li>
 		  <li><%= activity.created_at %></li>
 		  </ul>
 		<% end %>				

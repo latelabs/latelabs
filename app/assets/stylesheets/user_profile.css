@@ -11,18 +11,33 @@ body{
 .navbar.navbar-fixed-top{
 	background-color: rgb(254, 116, 0);
 	font-family: 'Roboto', sans-serif;
-/*	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
-*/}
+}
+.navbar.navbar-fixed-top .search #search{
+	width: 250px;
+	border:2px solid white;
+	border-radius:25px;
+}
 .navbar.navbar-fixed-top .signed-out-nav ul li{
 	line-height: 64px;
 	color: white;
 	display: inline-block;
 	margin-right: 25px;
 }
+.navbar.navbar-fixed-top .signed-out-nav ul li a:link, a:visited, a:hover, a:active{
+	color: white;
+}
 .navbar.navbar-fixed-top .signed-out-nav ul{
 	margin-left: 280px;
 	float: left;
 }
+.navbar.navbar-fixed-top .auth ul li{
+	display: inline-block;
+	color: white;
+}
+.navbar.navbar-fixed-top .auth ul li:nth-child(2){
+	margin-right: 15px;
+}
+
 .navbar.navbar-fixed-top .auth{
 	float: right;
 	line-height: 64px;
@@ -45,6 +60,13 @@ margin-top: 21px;
 	width:18px;
 	margin-top: -2px;
 	margin-right: 1px;
+}
+.container-fluid .row-fluid .span4 .user_info li .mail_image img{
+	height: 18px;
+	width:24px;
+	margin-top: -2px;
+	margin-right: 1px;
+	background-color: rgb(254, 116, 0);
 }
 .project_form{
 	margin-left: 20px;
