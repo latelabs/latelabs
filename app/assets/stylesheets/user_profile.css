@@ -54,7 +54,7 @@ body{
 	margin-left: 300px;
 }
 .navbar.navbar-fixed-top .search #search{
-margin-top: 21px;
+	margin-top: 21px;
 }
 .navbar.navbar-fixed-top .auth .mail_image img{
 	height: 12px;
@@ -72,8 +72,8 @@ margin-top: 21px;
 .project_form{
 	margin-left: 20px;
 }
-.container-fluid .row-fluid .span4 .user_info{
-
+.container-fluid .row-fluid .span4 .user_info li a{
+	color: rgb(107, 107, 107);
 }
 .container-fluid .row-fluid .span4{
 	float: left;
@@ -90,7 +90,25 @@ margin-top: 21px;
 .container-fluid .row-fluid .span4 .projects_container #new_skillset{
 	margin-top: 70px;
 }
-
+.container-fluid .row-fluid .span4 .skills_containder{
+	padding-top: 25px;
+}
+.container-fluid .row-fluid .span4 .skills_containder li a, .stared_project li a{
+color: rgb(107, 107, 107);
+}
+.container-fluid .row-fluid .span4 .skills_containder .new_project{
+background-color: rgb(0, 184, 174);
+padding:2px 3px;
+}
+.container-fluid .row-fluid .span4 .skills_containder .new_project a{
+color: white;
+}
+.container-fluid .row-fluid .span4 .skills_containder li, .stared_project li{
+	margin-top: 10px;
+}
+.container-fluid .row-fluid .span4 .stared_project h1{
+	color: black;
+}
 .container-fluid .row-fluid li img{
 	height: 150px;
 	width: 150px;
@@ -98,7 +116,6 @@ margin-top: 21px;
 .span4:nth-child(2) {
 	margin-top: 70px;
 }
-
 .flash{
 	text-align: center;
 	color: red;
