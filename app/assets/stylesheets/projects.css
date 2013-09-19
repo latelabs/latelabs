@@ -1,7 +1,7 @@
 .container-fluid .row-fluid .span4 .skills_containder{
 	padding-top: 25px;
 }
-.container-fluid .row-fluid .span4 .skills_containder li a{
+.container-fluid .row-fluid .span4 .skills_containder li a, .stared_project li a{
 color: rgb(107, 107, 107);
 }
 .container-fluid .row-fluid .span4 .skills_containder .new_project{
@@ -11,7 +11,12 @@ padding:2px 3px;
 .container-fluid .row-fluid .span4 .skills_containder .new_project a{
 color: white;
 }
-
+.container-fluid .row-fluid .span4 .skills_containder li, .stared_project li{
+	margin-top: 10px;
+}
+.container-fluid .row-fluid .span4 .stared_project h1{
+	color: black;
+}
 .show_project{
 	text-align: center;
 	margin-top: 50px;

@@ -21,7 +21,7 @@
 			</div>
 	<hr>
 	<div class="activity_feed">
-		<h3>Activity Feed</h3>
+		<h3>Activity Feed</h3><br>
 		<% @api_activity.each do |activity| %>
 			<ul>
 		  <li><h4><%= activity.type %></h4></li>
@@ -34,12 +34,16 @@
 	</div>
 
 		<div class="span4">
+			<div class="stared_project">
 			<h1>Projects You're Following</h1>
+			<h4>search specific tech to find awesome side projects</h4>
+			<br>
 				<% @user.stars.each do |s| %>
 					<ul>
-				  <h2><li><a href="../projects/<%= s.project_id %>">Another Users Project</a></li></h2>
+				  <h2><li><a href=""><%= Project.find(s.project.id).title %></a></li></h2>
 				  </ul>
 				<% end %>
+			</div>
 		</div>
 		<div class="span4">
 			<div class="skills_containder">
@@ -52,6 +56,7 @@
 					<br>
 				<% end %>
 				<h3>Projects you've listed</h3>
+				<br>
 				<% @user.projects.each do |p| %>
 					<ul>
 				  <h4><li><a href="../projects/<%= p.id %>"><%= p.title %></a></li></h4>
@@ -64,7 +69,7 @@
 				<% end %>
 				<% @user.skills.each do |s| %>
 					<ul>
-				  <h3><li><%= s.skill %></li></h3>
+				  <h4><li><%= s.skill %></li></h4>
 				  </ul>
 				<% end %>
 			</div>
