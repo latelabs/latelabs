@@ -6,6 +6,18 @@
 		</div>
 	</div>
 	<div class="rest">
+		<div class="follow_buttons">
+		<% unless current_user.id == @project.user_id %>
+	<!-- trying to build out more rail'sy routes -->
+	<%#= link_to "Message Project Owner", controller: "messages", id: "new", path(user_receiver: @project.user_id, project_id: @project.id) %>
+	<li><% unless already_following %>
+		<%= button_to "Follow", :controller => "stars", :action => "create", :project_id => @project.id %>
+	<% else %>
+		<h4><%= "Already Following!" %></h4>
+	<% end %></li>
+	<li><a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a><li>
+<% end %>
+</div>
 			<h4><li>About: <%= @project.explanation %></li></h4>
 			<li><%#= @project.skill %></li>
 			<li><%#= @project.contributors_link %></li>
@@ -25,19 +37,6 @@
 		<ul>
 	  <h3><li><%= s.skill %></li></h3>
 	  </ul>
-<% end %>
-
-<% unless current_user.id == @project.user_id %>
-	<!-- trying to build out more rail'sy routes -->
-	<%#= link_to "Message Project Owner", controller: "messages", id: "new", path(user_receiver: @project.user_id, project_id: @project.id) %>
-	<a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a>
-<br>
-	<% unless already_following %>
-		<%= button_to "Follow", :controller => "stars", :action => "create", :project_id => @project.id %>
-	<% else %>
-		<h4><%= "Already Following!" %></h4>
-	<% end %>
-
 <% end %>
 </div>
 	<%#= @project.inspect %>

@@ -20,6 +20,9 @@
 .rest .project_edit a{
 	color: rgb(107, 107, 107);
 }
+.rest .follow_buttons{
+	margin-bottom: 25px;
+}
 a:link,a:visited,a:active {
 	color:#383838;text-decoration:none;
 }
