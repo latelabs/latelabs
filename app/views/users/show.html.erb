@@ -22,7 +22,7 @@
 	<hr>
 	<div class="activity_feed">
 		<h3>Activity Feed</h3><br>
-		<% @api_activity.each do |activity| %>
+		<% @api_activity.sort_by{|t| - t.created_at.to_i}.first(10).each do |activity| %>
 			<ul>
 		  <li><h4><%= activity.type %></h4></li>
 		  <li><%#= activity.name %></li>
