@@ -1,26 +1,29 @@
-<div class="row-fluid">
+
 <div class="show_project">
 	<ul>
-		<li><%= @project.title %></li>
-		<li><%= link_to('code', @project.code_repository_link) %></li>
-		<li><%= @project.explanation %></li>
-		<li><%= @project.skill %></li>
-		<li><%= @project.contributors_link %></li>
+		<div class="row">
+			<h1><li><%= @project.title %></li></h1>
+			<h3><li><%= link_to('Link to the Code', @project.code_repository_link) %></li></h3>
+		</div>
+			<h4><li><%= @project.explanation %></li></h4>
+			<li><%#= @project.skill %></li>
+			<li><%#= @project.contributors_link %></li>
 	</ul>
 <% unless current_user.id != @project.user_id %>	
 	<ul>
 		<li><%= link_to('Edit', edit_project_path(@project)) %></li>
 		<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
 	</ul>
-
-
+</div>
+<div class="therest">
 <%= render 'skills' %>
 
 <% end %>
-
+<br>
+<h4>Check out the languages we are using:</h4>
 <% @project.skills.each do |s| %>
 		<ul>
-	  <li><%= s.skill %></li>
+	  <h1><li><%= s.skill %></li></h1>
 	  </ul>
 <% end %>
 
@@ -28,15 +31,15 @@
 	<!-- trying to build out more rail'sy routes -->
 	<%#= link_to "Message Project Owner", controller: "messages", id: "new", path(user_receiver: @project.user_id, project_id: @project.id) %>
 	<a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a>
-
+<br>
 	<% unless already_following %>
 		<%= button_to "Follow", :controller => "stars", :action => "create", :project_id => @project.id %>
 	<% else %>
-		<%= "Following" %>
+		<h4><%= "Already Following!" %></h4>
 	<% end %>
 
 <% end %>
-
+</div>
 	<%#= @project.inspect %>
-</div>
-</div>
+
+

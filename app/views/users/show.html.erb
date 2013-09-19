@@ -15,7 +15,7 @@
 					<li><h4>Private Repos: <%= @user.gh_private_repos %></h4></li>
 					<hr>
 					<li><span class="mail_image"><%= image_tag "mail.png" %></span> <%= link_to current_user.messages_received.count, '/messages'  %></li>
-					<li><%= "projects following  :  " %><%= current_user.stars.count %></li>
+					<li><%#= "projects following  :  " %><%#= current_user.stars.count %></li>
 
 				</ul>
 			</div>
@@ -37,7 +37,7 @@
 			<h1>Projects You're Following</h1>
 				<% @user.stars.each do |s| %>
 					<ul>
-				  <h2><li><%= s.project_id %></li></h2>
+				  <h2><li><a href="../projects/<%= s.project_id %>">Another Users Project</a></li></h2>
 				  </ul>
 				<% end %>
 		</div>
