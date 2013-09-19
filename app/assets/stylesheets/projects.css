@@ -8,6 +8,18 @@
 	padding: 60px 0;
 	margin-top: -45px;
 }
+.rest{
+	margin-left: 150px;
+	margin-top: 25px;
+}
+.rest .project_edit{
+	float: right;
+	margin-right: 50px;
+	color: rgb(107, 107, 107);
+}
+.rest .project_edit a{
+	color: rgb(107, 107, 107);
+}
 a:link,a:visited,a:active {
 	color:#383838;text-decoration:none;
 }
