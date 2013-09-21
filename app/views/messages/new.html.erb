@@ -1,21 +1,22 @@
-<center><h2>New Message</h2>
+<div class='sending_message'>
+<h2>New Message to <%= User.find(params[:user_receiver]).user_name %> about the project :: <%= Project.find(params[:project_id]).title %></h2>
 
  <%= form_for @message do |f| %>
   <%= f.hidden_field :user_receiver %>
   <%= f.hidden_field :user_sender%>
   <%= f.hidden_field :project_id %>
   <br>
-  <%= f.text_field :title %>
-  <%= f.label :subject %>
-    <br>
-  <%= f.text_area :body %>
-  <%= f.label :body %>
+  <%= f.text_field :title, :placeholder => 'Message subject here' %>
   <br>
   <br>
-  <%= f.submit %>
+  <%= f.text_area :body, :placeholder => 'Type your message here. Make sure and let them know why you are interested in their project and if you would like to colloborate.' %>
+  <br>
+  <br>
+  <%= f.submit class: "btn" %>
 <% end %>
 
 <hr>
 <%= @message.inspect %>
 <%= params.inspect %>
-</center>
+
+</div>
