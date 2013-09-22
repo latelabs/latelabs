@@ -17,7 +17,7 @@
 	<%# end %>
 
 <hr> -->
-<center>
+
 	<h1><%= current_user.user_name %>'s Inbox</h1>
 	<br>
 	<h3>total count: (<%= current_user.messages_received.count %>)</h3>
@@ -31,7 +31,8 @@
 	</ul>
 	
 	<% end %>
-</center>
 
+</div>
 
-<%#= @message.inspect %>
+<%= @messages.inspect %><br>
+<%= params.inspect %>
