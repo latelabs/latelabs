@@ -1,38 +1,19 @@
 <div class="messages">
 
-<!-- 	Received: (<%#= current_user.messages_received.count %>)
-	<%# current_user.messages_received.reverse.each do |m| %>
-	<ul>
-		<li><%#= m.title %></li>
-	</ul>
-	<%# end %>
-
-<hr>
-
-	Sent: (<%#= current_user.messages_sent.count %>)</h4>
-	<%# current_user.messages_sent.reverse.each do |m| %>
-	<ul>
-		<li><%#= m.title %></li>
-	</ul>
-	<%# end %>
-
-<hr> -->
-
 	<h1><%= current_user.user_name %>'s Inbox</h1>
 	<br>
 	<h3>total count: (<%= current_user.messages_received.count %>)</h3>
 	<br>
 	<% current_user.messages_received.reverse.each do |m| %>
 	<ul>
-		<li> <h2>from: <%= @sender_name %></h2></li>
-		<hr><br>
-		<li><h2><a href='/messages/<%= m.id%>'> <%= m.title %> </a></h2></li>
-		<%#= link_to  %>
+		<li> <h2>from: <%= User.find(m.user_sender).user_name %></h2></li>
+		<br>
+		<li> <h2>about: <%= Project.find(m.project_id).title %></h2></li>
+		<br>
+		<li><h2>link to: <a href='/messages/<%= m.id %>'> <%= m.title %> </a></h2></li>
+		<hr>
 	</ul>
 	
 	<% end %>
 
 </div>
-
-<%= @messages.inspect %><br>
-<%= params.inspect %>

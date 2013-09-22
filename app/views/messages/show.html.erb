@@ -2,12 +2,13 @@
 <h1>Messages for <%= @project_name %></h1>
 <br>
 <br>
-Sent by: <%= @sender_name %>
-<br>
 <h3>Subject: <%= @message.title %></h3>
 <br>
-<h4>Message: <%= @message.body %></h4>
+<h4>Message: 
+	<br><%= @message.body %></h4>
 <br>
+<br>
+Sent by: <%= @sender_name %>
 Sent at: <%= @message.created_at %>
 <br>
 <br>
