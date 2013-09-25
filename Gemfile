@@ -25,6 +25,8 @@ gem 'mail'
 gem 'github_api'
 gem 'better_errors', :group => :development
 gem 'foreman'
+gem 'keen'
+gem "em-http-request", "~> 1.0"
 
 group :production do
 	gem 'pg'

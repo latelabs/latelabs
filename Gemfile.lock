@@ -54,6 +54,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    cookiejar (0.3.0)
     devise (3.0.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -61,7 +62,16 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
     dotenv (0.8.0)
+    em-http-request (1.0.3)
+      addressable (>= 2.2.3)
+      cookiejar
+      em-socksify
+      eventmachine (>= 1.0.0.beta.4)
+      http_parser.rb (>= 0.5.3)
+    em-socksify (0.3.0)
+      eventmachine (>= 1.0.0.beta.4)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.0.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
@@ -77,6 +87,7 @@ GEM
       oauth2
     hashie (2.0.5)
     hike (1.2.3)
+    http_parser.rb (0.5.3)
     httpauth (0.2.0)
     i18n (0.6.1)
     journey (1.0.4)
@@ -86,6 +97,8 @@ GEM
     json (1.8.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
+    keen (0.7.7)
+      multi_json (~> 1.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -191,9 +204,11 @@ DEPENDENCIES
   better_errors
   coffee-rails (~> 3.2.1)
   devise
+  em-http-request (~> 1.0)
   foreman
   github_api
   jquery-rails
+  keen
   mail
   omniauth-github!
   pg
