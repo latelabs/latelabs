@@ -11,10 +11,12 @@
 	font-weight: 300;
 	margin-top: 150px;
 	padding-bottom: 30px;
+	color: white;
 }
 
 .welcome.row h3{
 	padding-bottom: 40px;
+	color: white;
 }
 
 .welcome.row .featured {
