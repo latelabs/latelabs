@@ -6,17 +6,19 @@
 	margin: 0;
 	position: relative;
 }
-.welcome.row h1{
+.welcome.row h1 {
 	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
 	margin-top: 150px;
 	padding-bottom: 30px;
 	color: white;
 }
 
-.welcome.row h3{
+.welcome.row h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 35px;
 	padding-bottom: 40px;
-	color: white;
+	color: white ;
 }
 
 .welcome.row .featured {
