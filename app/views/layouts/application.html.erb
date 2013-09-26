@@ -11,35 +11,46 @@
  		<div class="navbar navbar-fixed-top">
  			<div class="logo"><%= image_tag "latelabsLogo.png" %></div>
  			<% if user_signed_in? %>
+ 			<%= link_to image_tag("latelabsLogo.png", :border => 0), {:action => 'show', :controller => 'users', :id => current_user.id}, {:class => 'logo'} %>
  				<div class="search">
-
  				<%= form_tag skillsets_path, :method => 'get' do %>
-				<%= text_field_tag :search %>
+				<%= text_field_tag :search, nil, :placeholder => 'search i.e. rails or angular' %>
 				<div class="search_button"><%= submit_tag "search" %></div>
 				</div>
 				<% end %>
 				<% else %>
 				<span class="signed-out-nav">
 					<ul>
-						<li>home</li>
-						<li>projects</li>
-						<li>about</li>
-						<li>blog</li>
-						<li>help</li>
+						<li><a href="/">home</a></li>
+<!-- 						<li>projects</li>
+ -->						<li><a href="http://legacy.latelabs.com/about">about</a></li>
+						<li><a href="http://latelabs.tumblr.com">blog</a></li>
+						<li><a href="http://legacy.latelabs.com/faq">faq</a></li>
 					</ul>
 				</span>
 			<% end %>
-				
+			
 			<div class="auth">
 				<% if user_signed_in? %>
-		 		  <%= link_to current_user.user_name, user_path(current_user.id)  %> |
-		 		  <span class="mail_image"><%= image_tag "mail.png" %></span> <%= link_to current_user.messages_received.count, '/messages'  %> |
-		 		  <%= link_to 'Edit profile', edit_user_registration_path %> |
-				  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+				<ul>
+<!-- 				 <li><span><img src="http://www.gravatar.com/avatar/<%#= @user.gravartar_id %>"/></span></li>
+ -->		 		 <li><span> <%= link_to current_user.user_name, user_path(current_user.id)  %></span></li> |
+		 		 <li><span class="mail_image"><%= image_tag "mail.png" %> <%= link_to current_user.messages_received.count, '/messages'  %></span></li> 
+				<li><div class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= image_tag("arrow_down_white.png") %></a>
+	 			  <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="/projects">Your projects</a></li>
+					    <li><%#= link_to 'Edit profile', edit_user_registration_path %></li>
+					    <li role="presentation" class="divider"></li>
+					    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+					  </ul>
+				</div><li>
+				</ul>
+			</div>
 				<% else %>
-				  <%#= link_to "GitHub", user_omniauth_authorize_path(:github) %>
-				  <%= link_to "signin", new_user_session_path %> |
-					<%= link_to "join", new_user_registration_path %> 
+				  <%= link_to "login", user_omniauth_authorize_path(:github) %>
+				  <%#= link_to "signin", new_user_session_path %> 
+					<%#= link_to "join", new_user_registration_path %> 
 				<% end %>
 			</div>
 		</div>
@@ -53,7 +64,7 @@
 		</div>
 
 				<%= yield %>
-
+		<footer>This is the footer</footer>
 		<%#= debug(params) if Rails.env.development? %>
 </body>
 </html>

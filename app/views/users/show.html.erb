@@ -5,25 +5,28 @@
 				<br>
 				<ul>
 					<li><img src="http://www.gravatar.com/avatar/<%= @user.gravartar_id %>"/></li>
-					<li><center><h1><%= @user.user_name %></h1></center></li>
-					<li>Location: <%= @user.location %></li>
+					<li><h1><%= @user.user_name %></h1></li>
+					<li><h3><%= @user.location %></h3></li>
 					<br>
-					<li>GitHub Information</li>
-					<li>Followers: <%= @user.gh_followers %></li>
-					<li>Following: <%= @user.gh_following %></li>
-					<li>Public Repos: <%= @user.gh_public_repos %></li>
-					<li>Private Repos: <%= @user.gh_private_repos %></li>
+					<li><h4>GitHub Information</h4></li>
+					<li><h4>Followers: <%= @user.gh_followers %></h4></li>
+					<li><h4>Following: <%= @user.gh_following %></h4></li>
+					<li><h4>Public Repos: <%= @user.gh_public_repos %></h4></li>
+					<li><h4>Private Repos: <%= @user.gh_private_repos %></h4></li>
 					<hr>
-					<li><%= "Other Projects  :  " %><%= current_user.stars.count %></li>
+					<li><span class="mail_image"><%= image_tag "mail.png" %></span> <%= link_to current_user.messages_received.count, '/messages'  %></li>
+					<li><%#= "projects following  :  " %><%#= current_user.stars.count %></li>
+
 				</ul>
 			</div>
 	<hr>
 	<div class="activity_feed">
-		<% @api_activity.each do |activity| %>
+		<h3>Activity Feed</h3><br>
+		<% @api_activity.sort_by{|t| - t.created_at.to_i}.first(10).each do |activity| %>
 			<ul>
-		  <li><%= activity.type %></li>
-		  <li><%= activity.name %></li>
-		  <li><%= activity.description %></li>
+		  <li><h4><%= activity.type %></h4></li>
+		  <li><%#= activity.name %></li>
+		  <li><%#= activity.description %></li>
 		  <li><%= activity.created_at %></li>
 		  </ul>
 		<% end %>				
@@ -31,29 +34,42 @@
 	</div>
 
 		<div class="span4">
-			<div class="skills_containder"></div>
-			<div class="bio"><h1><%= @user.bio %></h1></div>
-
-			<% unless current_user.id != @user.id %>
-				<%= render 'skills' %>
-				<% @user.skills.each do |s| %>
+			<div class="stared_project">
+			<h1>Projects You're Following</h1>
+			<h4>search specific tech to find awesome side projects</h4>
+			<br>
+				<% @user.stars.each do |s| %>
 					<ul>
-				  <li><%= s.skill %></li>
+				  <h2><li><a href=""><%= Project.find(s.project.id).title %></a></li></h2>
 				  </ul>
 				<% end %>
-			<% end %>
 			</div>
+		</div>
 		<div class="span4">
-			<div class="projects_container">
-				<% unless current_user.id != @user.id %>	
-						<div class="new_project">
-							<%= link_to "New Project", :controller => "projects", :action => "new" %>
-						</div>
+			<div class="skills_containder">
+<!-- 			<div class="bio"><h1><%#= @user.bio %></h1></div>
+ --><% unless current_user.id != @user.id %>	
+					<div class="new_project">
+						<h2><center><%= link_to "New Project!", :controller => "projects", :action => "new" %></center></h2>
+					</div>
+					<br>
+					<br>
 				<% end %>
+				<h3>Projects you've listed</h3>
+				<br>
 				<% @user.projects.each do |p| %>
 					<ul>
-				  <li><a href="../projects/<%= p.id %>"><%= p.title %></a></li>
+				  <h4><li><a href="../projects/<%= p.id %>"><%= p.title %></a></li></h4>
 				  <li><%= p.explanation %></li>
+				  </ul>
+				<% end %>
+				<br>
+			<% unless current_user.id != @user.id %>
+				<%= render 'skills' %>
+				<% end %>
+				<% @user.skills.each do |s| %>
+					<ul>
+				  <h4><li><%= s.skill %></li></h4>
 				  </ul>
 				<% end %>
 			</div>

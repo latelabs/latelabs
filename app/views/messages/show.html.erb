@@ -1,28 +1,29 @@
-<center>
-<div class="message_show"></div>
+<div class="message_show">
 <h1>Messages for <%= @project_name %></h1>
 <br>
 <br>
+<h3>Subject: <%= @message.title %></h3>
+<br>
+<h4>Message: 
+	<br><%= @message.body %></h4>
+<br>
+<br>
 Sent by: <%= @sender_name %>
-<br>
-<h5>Subject: <%= @message.title %></h5>
-<br>
-<br>`
-<h3>Message: <%= @message.body %></h3>
-<br>
 Sent at: <%= @message.created_at %>
 <br>
-<a href='/messages/new/?user_receiver=<%= @message.user_sender %>&project_id=<%= @message.project_id %>&message_id=<%= @message.id %>'>Reply</a>
+<br>
+<h4><a href='/messages/new/?user_receiver=<%= @message.user_sender %>&project_id=<%= @message.project_id %>&message_id=<%= @message.id %>'>Reply</a></h4>
 <hr>
-
+<h2>Past messages:</h2><br>
 <% @messages.each do |m| %>
 <ul>
 	<li>Sent by <%= m.sender.user_name %> about the <%= @project_name %> project.</li>
-	<li><h1><%= m.title %></h1></li>
-	<li><h3><%= m.body %></h3></li>
+	<li><h3>Subject: <%= m.title %></h3></li>
+	<li><h4>Message: <%= m.body %></h4></li>
+	<hr>
 </ul
 ><% end %>
 <%#= @messages.inspect %><br>
 <%#= params.inspect %><br>
 <%#= @message.inspect %><br>
-</center>
+</div>
