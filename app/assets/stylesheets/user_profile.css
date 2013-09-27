@@ -40,6 +40,31 @@
 	color: white
 }
 
+.footer {
+	background-color: rgb(52, 52, 52);
+	color: white;
+	font-family: 'Roboto', sans-serif;
+  width:100%;
+  bottom: auto;
+  position: absolute;
+  line-height: 120px;
+  padding: 0 5%;
+}
+
+.footer ul {
+	float: right;
+}
+
+.footer ul li {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+.footer ul li a:link, a:visited, a:hover, a:active {
+	color: white;
+	list-style: yes;
+}
+
 ul{
 	list-style-type: none;
 }

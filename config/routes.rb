@@ -13,6 +13,14 @@ Latelabs::Application.routes.draw do
     resources :skills
   end
 
+  get "/about" => "users#about"
+
+  get "/FAQ" => "users#faq"
+
+  get "/termsandconditions" => "users#termsandconditions"
+
+  get "/privacy" => "users#privacy"
+
   post "/stars" => "stars#create"
 
   post "/skills" => "skills#create"
