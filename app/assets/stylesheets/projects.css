@@ -235,17 +235,7 @@ body {
 	
 }
 */
-#featured a {
-	padding-left: 25px;
-	padding-right: 25px;
-	opacity: 0.6;
-}
 
-#featured a:hover {
-	padding-left: 25px;
-	padding-right: 25px;
-	opacity: 0.9;
-}
 
 /*#tech {
 	margin-left: -520px;
@@ -277,24 +267,5 @@ body {
 	background: #f2f2f2;
 }*/
 
-.featured ul {
-    list-style: none outside none;
-    margin: 0 auto;
-    padding: 0;
-    width: 700px;
-}
-
-.featured ul li {
-	display:inline;
-	width:auto;
-	height:100px;
-	margin: 25px 25px 0 0;
-}
-.featured ul li a {
-line-height:100px;
-}
-.featured ul li a img {
- 	vertical-align: middle;
-}
 
 /*end-jlr*/
