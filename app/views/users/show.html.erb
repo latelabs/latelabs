@@ -40,7 +40,7 @@
 			<br>
 				<% @user.stars.each do |s| %>
 					<ul>
-				  <h2><li><a href=""><%= Project.find(s.project.id).title %></a></li></h2>
+				  <h2><li><a href="/projects/<%= s.project.id %>"><%= Project.find(s.project.id).title %></a></li></h2>
 				  </ul>
 				<% end %>
 			</div>

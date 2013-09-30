@@ -2,6 +2,13 @@ class ProjectsController < ApplicationController
 	
 	before_filter :authenticate_user!
 
+	# keen analytics to track information about individual projects
+
+	def project
+  @project = Project.find_by_id(params[:id])
+  tracker = Keen.publish("view_project", {:visitor_id => current_user.id, :title => @project.title, :project_id => @project.id })
+	end
+
 	def index
 		@project = Project.all
 	end
