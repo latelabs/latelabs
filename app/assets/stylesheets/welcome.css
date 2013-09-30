@@ -3,9 +3,34 @@
 	margin-top: 80px;
 }
 .welcome h1{
-	margin-bottom: 20px;
-	font-size: 70px;
+	margin-bottom: 0px;
+	font-size: 80px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+}
 }
 .welcome h4{
 	margin-bottom: 20px;
+}
+
+.welcome h2{
+	color: #fff;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	margin-bottom: 50px;
+}
+
+.featured ul {
+    margin: 25px auto;
+    padding: 0;
+    width: 100%;
+}
+
+.featured li {
+	    display: inline;
+	    padding: 0 20px 0 20px;
+}
+.featured img {
+	height: 40px;
 }
