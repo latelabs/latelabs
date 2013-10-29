@@ -2,13 +2,14 @@
 	text-align: center;
 	margin-top: 80px;
 }
+
 .welcome h1{
 	margin-bottom: 0px;
 	font-size: 80px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
 }
-}
+
 .welcome h4{
 	margin-bottom: 20px;
 }
@@ -31,6 +32,7 @@
 	    display: inline;
 	    padding: 0 20px 0 20px;
 }
+
 .featured img {
 	height: 40px;
 }

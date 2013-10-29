@@ -6,6 +6,7 @@
 	margin: 0;
 	position: relative;
 }
+
 .welcome.row h1 {
 	font-family: 'Roboto', sans-serif;
 	margin-top: 150px;
@@ -29,15 +30,17 @@
 	bottom: 0;
 	left: 0;
 }
+
 .about.row {
 	background-color: rgb(22, 22, 22);
 	line-height: 750px;
 	color: white;
 }
+
 .why.row {
 	background-color: rgb(22, 22, 22);
 	line-height: 750px;
-	color: white
+	color: white;
 }
 
 .footer {
@@ -68,40 +71,49 @@
 ul{
 	list-style-type: none;
 }
+
 body{
 	background-color: rgb(248, 248, 248);
 }
+
 .logo{
 	position: fixed;
 	margin-left: 100px;
 }
+
 .navbar.navbar-fixed-top{
 	background-color: rgb(254, 116, 0);
 	font-family: 'Roboto', sans-serif;
 }
+
 .navbar.navbar-fixed-top .search #search{
 	width: 250px;
 	border:2px solid white;
 	border-radius:25px;
 }
+
 .navbar.navbar-fixed-top .signed-out-nav ul li{
 	line-height: 64px;
 	color: white;
 	display: inline-block;
 	margin-right: 25px;
 }
+
 .navbar.navbar-fixed-top .signed-out-nav ul li a:link, a:visited, a:hover, a:active{
 	color: white;
 	list-style: yes;
 }
+
 .navbar.navbar-fixed-top .signed-out-nav ul{
 	margin-left: 280px;
 	float: left;
 }
+
 .navbar.navbar-fixed-top .auth ul li{
 	display: inline-block;
 	color: white;
 }
+
 .navbar.navbar-fixed-top .auth ul li:nth-child(2){
 	margin-right: 15px;
 }
@@ -112,23 +124,27 @@ body{
 	padding-right: 100px;
 	color: white;
 }
+
 .navbar.navbar-fixed-top .logo img{
 	margin-top: 16px;
-
 }
+
 .navbar.navbar-fixed-top .search{
 	float: left;
 	margin-left: 300px;
 }
+
 .navbar.navbar-fixed-top .search #search{
 	margin-top: 21px;
 }
+
 .navbar.navbar-fixed-top .auth .mail_image img{
 	height: 12px;
 	width:18px;
 	margin-top: -2px;
 	margin-right: 1px;
 }
+
 .container-fluid .row-fluid .span4 .user_info li .mail_image img{
 	height: 18px;
 	width:24px;
@@ -137,58 +153,74 @@ body{
 	margin-left: 30px;
 	background-color: rgb(254, 116, 0);
 }
+
 .project_form{
 	margin-left: 20px;
 }
+
 .container-fluid .row-fluid .span4 .user_info li a{
 	color: rgb(107, 107, 107);
 }
+
 .container-fluid .row-fluid .span4{
 	float: left;
 	margin-left: 120px;
 }
+
 .container-fluid .row-fluid .span4 .skills_container{
 	margin-left: 25px;
 	margin-top: 50px;
 }
+
 .container-fluid .row-fluid .span4 .projects_container{
 	margin-left: 25px;
 	margin-top: 70px;
 }
+
 .container-fluid .row-fluid .span4 .projects_container #new_skillset{
 	margin-top: 70px;
 }
+
 .container-fluid .row-fluid .span4 .skills_containder{
 	padding-top: 25px;
 }
+
 .container-fluid .row-fluid .span4 .skills_containder li a, .stared_project li a{
 color: rgb(107, 107, 107);
 }
+
 .container-fluid .row-fluid .span4 .skills_containder .new_project{
 background-color: rgb(0, 184, 174);
 padding:2px 3px;
 }
+
 .container-fluid .row-fluid .span4 .skills_containder .new_project a{
 color: white;
 }
+
 .container-fluid .row-fluid .span4 .skills_containder li, .stared_project li{
 	margin-top: 10px;
 }
+
 .container-fluid .row-fluid .span4 .stared_project h1{
 	color: black;
 }
+
 .container-fluid .row-fluid li img{
 	height: 150px;
 	width: 150px;
 }
+
 .span4:nth-child(2) {
 	margin-top: 70px;
 }
+
 .flash{
 	text-align: center;
 	color: red;
 	padding-top: 60px;
 }
+
 .search .search_button{
 	display:none;
 }

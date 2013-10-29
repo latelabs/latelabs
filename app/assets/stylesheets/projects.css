@@ -2,27 +2,33 @@
 	text-align: center;
 	margin-top: 50px;
 }
+
 .show_project .row{
 	background-color: rgb(0, 184, 174);
 	color: white;
 	padding: 60px 0;
 	margin-top: -45px;
 }
+
 .rest{
 	margin-left: 150px;
 	margin-top: 25px;
 }
+
 .rest .project_edit{
 	float: right;
 	margin-right: 50px;
 	color: rgb(107, 107, 107);
 }
+
 .rest .project_edit a{
 	color: rgb(107, 107, 107);
 }
+
 .rest .follow_buttons{
 	margin-bottom: 25px;
 }
+
 a:link,a:visited,a:active {
 	color:#383838;text-decoration:none;
 }
@@ -39,13 +45,11 @@ html {
 	font-size: 16px;
 	height: 100%;
 	font-family: 'Roboto', sans-serif;
-
 }
 
 body, h1, h2, h3, h4, h5, h6, ul, li, p {
 	margin: 0;
 	padding: 0;
-
 }
 
 body {
@@ -68,11 +72,12 @@ body {
 	background: url(#) repeat-x;
 	z-index:9;
 }
-.Gokrt {
-	padding-top: 0px; /* 8px/10px */;	
-	padding-left: 25px;
 
+.Gokrt {
+	padding-top: 0px;	
+	padding-left: 25px;
 }
+
 .Gokrt a {
 	text-align: center;
 	display: block;
@@ -194,78 +199,3 @@ body {
 
 /*------- END HEADER ------*/
  
-
-/*------- FOOTER -------*/
-
-/*#footer {
-	text-align: center;
-	font-size: 12px;
-	width: 840px;
-	margin-bottom: 25px;
-	line-height: 220%;
-}
-*/
-
-/*------- END FOOTER -------*/
-
-
-/*----- FEATURED -----*/
-
-
-/*#techcrunch {
-	background: url(images/techcrunch.png) no-repeat;
-	width: 161px;
-	height: 28px;
-	text-indent: -99999999px;
-}
-
-#venturebeat {
-	background: url(images/venturebeat.png) no-repeat;
-	width: 164px;
-	height: 21px;
-	text-indent: -99999999px;
-}
-*/
-/*#featured {
-	margin-top: 130px;
-	padding-top: 25px;
-	height: 55px;
-	width: 100%;
-	background: #f2f2f2;
-	
-}
-*/
-
-
-/*#tech {
-	margin-left: -520px;
-}
-*/
-/*#cocktail {
-		margin-left: -170px;
-		margin-top: -40px;
-}
-
-#venture {
-		margin-left: 180px;
-		margin-top: -40px;
-}
-
-#pando {
-		margin-left: 570px;
-		margin-top: -30px;
-}
-*/
-/*----- FEATURED -----*/
-
-
-/*start-jlr*/
-
-
-/*.featured{
-  margin: 275px 0 50px 0;
-	background: #f2f2f2;
-}*/
-
-
-/*end-jlr*/
