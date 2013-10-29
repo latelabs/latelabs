@@ -11,5 +11,4 @@ include StarsHelper
 		current_project = Project.find(params[:project_id])
     redirect_to project_path(current_project.id)
 	end
-
 end

@@ -64,7 +64,7 @@ body {
 }
 
 .header {
-	height: 69px; /* 57px/10px */;
+	height: 69px; 
 	background: url(#) repeat-x;
 	z-index:9;
 }
