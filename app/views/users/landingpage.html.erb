@@ -1,0 +1,18 @@
+<div class="landingpage">
+
+	<div class="main">
+		<img src="assets/icon.png" />
+		<h1>Late Labs 2.0 is in Private Beta </h1>
+		
+		<h2>To receive an invite to our private beta, please give us your email.</h2>
+
+		<%= form_for :users, :url => {:action => :create} do |f| %>
+		   <%= f.text_field :email %>
+		   <%= f.submit %>
+		<% end %>
+	</div>
+
+	<footer>
+		<p>To contribute to our Open-Source platform, check out our <a href="https://github.com/latelabs/latelabs">Github Repository</a></p>
+	</footer>
+</div>

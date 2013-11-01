@@ -1,0 +1,44 @@
+<div class="navbar navbar-fixed-top">
+		<div class="logo"><%= image_tag "latelabsLogo.png" %></div>
+		<% if user_signed_in? %>
+		<%= link_to image_tag("latelabsLogo.png", :border => 0), {:action => 'show', :controller => 'users', :id => current_user.id}, {:class => 'logo'} %>
+			<div class="search">
+			<%= form_tag skillsets_path, :method => 'get' do %>
+		<%= text_field_tag :search, nil, :placeholder => 'search i.e. rails or angular' %>
+		<div class="search_button"><%= submit_tag "search" %></div>
+		</div>
+		<% end %>
+		<% else %>
+		<span class="signed-out-nav">
+		<ul>
+			<li><a href="/">home</a></li>
+			<li><a href="/about">about</a></li>
+			<li><a href="http://latelabs.tumblr.com">blog</a></li>
+			<li><a href="/FAQ">faq</a></li>
+		</ul>
+		</span>
+	<% end %>
+			
+	<div class="auth">
+	<% if user_signed_in? %>
+		<ul>
+ 		 <li><span> <%= link_to current_user.user_name, user_path(current_user.id)  %></span></li> |
+ 		 <li><span class="mail_image"><%= image_tag "mail.png" %> <%= link_to current_user.messages_received.count, '/messages'  %></span></li> 
+		 <li><div class="dropdown">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= image_tag("arrow_down_white.png") %></a>
+		  <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+		    <li><a href="/projects">Your projects</a></li>
+		    <li><%#= link_to 'Edit profile', edit_user_registration_path %></li>
+		    <li role="presentation" class="divider"></li>
+		    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+		  </ul>
+		  </div></li>
+		</ul>
+	</div>
+	<% else %>
+		 <%= link_to "login", user_omniauth_authorize_path(:github) %>
+		  <%#= link_to "signin", new_user_session_path %> 
+		  <%#= link_to "join", new_user_registration_path %> 
+	<% end %>
+	</div>
+</div>

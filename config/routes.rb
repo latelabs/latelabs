@@ -25,7 +25,7 @@ Latelabs::Application.routes.draw do
 
   post "/skills" => "skills#create"
 
-  root :to => "users#index"
+  root :to => "users#landingpage"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
