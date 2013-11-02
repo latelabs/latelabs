@@ -12,10 +12,6 @@ class UsersController < ApplicationController
 		
 	end
 
-	def create
-		User.create(params[:user])
-	end
-
 	def show
 		
 		if params[:id].nil? 

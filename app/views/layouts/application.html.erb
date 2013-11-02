@@ -8,20 +8,10 @@
 	  <%= csrf_meta_tags %>
 	  <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,500,300italic,300' rel='stylesheet' type='text/css'>
 	</head>
-
 	<body>
-		
-	<div class="row">
-		<div class="flash">
-			<% flash.each do |name, msg| %>
-				<%= content_tag :div, msg, id: "flash_#{name}" %>
-			<% end %>
-		</div>
-	</div>
 	
 	<%= yield %>
 	
-	<%#= debug(params) if Rails.env.development? %>
+	<%= debug(params) if Rails.env.development? %>
 	</body>
-	
 </html>

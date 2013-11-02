@@ -1,3 +1,11 @@
+<div class="row">
+	<div class="flash">
+		<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, id: "flash_#{name}" %>
+		<% end %>
+	</div>
+</div>
+
 <div class="navbar navbar-fixed-top">
 		<div class="logo"><%= image_tag "latelabsLogo.png" %></div>
 		<% if user_signed_in? %>
