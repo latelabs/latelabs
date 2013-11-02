@@ -21,11 +21,13 @@ Latelabs::Application.routes.draw do
 
   get "/privacy" => "users#privacy"
 
+  get "/signedup" => "signups#signedup"
+
   post "/stars" => "stars#create"
 
   post "/skills" => "skills#create"
 
-  root :to => "users#index"
+  root :to => "signups#landingpage"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

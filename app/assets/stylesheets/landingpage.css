@@ -1,0 +1,187 @@
+.landingpage {
+	background-color: rgb(254, 116, 0);
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.landingpage img{
+	padding-top: 10%;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+ 
+img:hover{opacity:0.2}​
+
+.main {
+	margin-top: 10%;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+.landingpage h1 {
+	font-family: 'Roboto', sans-serif;
+	margin-top: 50px;
+	font-size: 80px;
+	padding-bottom: 0px;
+	color: white;
+	margin-bottom: -1px;
+}
+
+.landingpage h2 {
+	color: #fff;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	margin-bottom: 50px;
+	font-size: 24px;
+	background-color: rgb(254, 116, 0);
+
+}
+
+.landingpage footer {
+	background-color: rgb(22, 22, 22);
+	width: 110%;
+	margin-left: -5%;
+	clear: both;
+	position:absolute;
+	bottom:0;
+	z-index: 10;
+	height: 70px;
+}
+
+.landingpage footer p {
+	padding-top: 5px;
+	color: #ccc;
+	font-family: helvetica, arial, sans-serif;
+	text-decoration: none;	
+}
+
+.landingpage footer a {
+	text-decoration: none;
+	color: rgb(254, 116, 0);
+}
+
+input[type=text] {
+	height: 39px;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 16px;
+	border: 0;
+	text-align: left;
+	text-decoration: none;
+	padding-right: 20px;
+	text-indent: 10px;
+}
+
+input[type=submit] {
+	background-color: #000;
+	font-family: font-family: helvetica, arial, sans-serif;
+	color: #fff;
+	border: 0;
+	padding: 20px, 20px, 20px, 20px;
+	width: 90px;
+	height: 40px;
+	font-size: 16px;
+	cursor: hand;
+	outline: none;
+}
+input[type=submit]:hover {
+	background-color: #333;
+	cursor: pointer;
+	outline: none;
+}
+
+
+
+@media screen and (max-width: 587px) {
+
+.landingpage {
+	background-color: rgb(254, 116, 0);
+	text-align: center;
+}
+
+.landingpage .main {
+	margin-top: 10%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+.landingpage h1 {
+	font-family: 'Roboto', sans-serif;
+	margin-top: 50px;
+	font-size: 80px;
+	padding-bottom: 0px;
+	color: white;
+	margin-bottom: -1px;
+}
+
+.landingpage h2 {
+	color: #fff;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	margin-bottom: 50px;
+	font-size: 24px;
+}
+
+.landingpage footer {
+	height: 70px;
+	background-color: rgb(254, 116, 0);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.landingpage footer p {
+	padding-top: 5px;
+	color: #fff;
+	font-family: helvetica, arial, sans-serif;
+	text-decoration: none;
+	width: 90%;
+}
+
+.landingpage a {
+	text-decoration: none;
+	color: #000;
+}
+
+input[type=text] {
+	height: 39px;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 16px;
+	border: 0;
+	text-align: left;
+	text-decoration: none;
+	padding-right: 20px;
+	text-indent: 10px;
+}
+
+input[type=submit] {
+	background-color: #000;
+	font-family: font-family: helvetica, arial, sans-serif;
+	color: #fff;
+	border: 0;
+	padding: 20px, 20px, 20px, 20px;
+	width: 90px;
+	height: 40px;
+	font-size: 16px;
+	cursor: hand;
+	outline: none;
+}
+
+input[type=submit]:hover {
+	background-color: #333;
+	cursor: pointer;
+	outline: none;
+}
+
+
+	}

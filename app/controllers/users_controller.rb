@@ -4,8 +4,8 @@ class UsersController < ApplicationController
 	# keen analytics to track user behavior information
 
 	def user
-  @user = User.find_by_id(params[:id])
-  tracker = Keen.publish("view_profile", {:visitor_id => current_user.id, :name => @user.user_name })
+	  @user = User.find_by_id(params[:id])
+	  #tracker = Keen.publish("view_profile", {:visitor_id => current_user.id, :name => @user.user_name })
 	end
 
 	def index
