@@ -6,8 +6,8 @@
 		
 		<h2>To receive an invite to our private beta, signup and we will get back to you when everythings ready.</h2>
 
-		<%= form_for :signups do |f| %>
-		   <%= f.text_field :signup %>
+		<%= form_for @signup do |f| %>
+		   <%= f.text_field :signup_email  %>
 		   <%= f.submit "submit" %>
 		<% end %>
 	</div>

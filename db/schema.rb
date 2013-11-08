@@ -52,9 +52,9 @@ ActiveRecord::Schema.define(:version => 20131102004057) do
   end
 
   create_table "signups", :force => true do |t|
-    t.string   "signups"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "signup_email"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "skills", :force => true do |t|

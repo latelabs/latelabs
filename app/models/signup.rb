@@ -1,4 +1,4 @@
 class Signup < ActiveRecord::Base
-  attr_accessible :signup
+  attr_accessible :signup_email
 
 end
