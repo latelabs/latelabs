@@ -1,3 +1,4 @@
+<%= render 'header' %>
 <div class="show_project">
 	<ul>
 		<div class="row">
@@ -16,6 +17,7 @@
 					<h4><%= "Already Following!" %></h4>
 				<% end %></li>
 				<li><a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a><li>
+				<li><% Keen.publish("view_project", {:visitor_id => current_user.id, :title => @project.title, :project_id => @project.id }) %></li>
 			<% end %>
 		</div>
 			<h4><li>About: <%= @project.explanation %></li></h4>
