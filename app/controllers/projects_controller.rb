@@ -5,8 +5,7 @@ class ProjectsController < ApplicationController
 	# keen analytics to track information about individual projects
 
 	def project
-  @project = Project.find_by_id(params[:id])
-  tracker = Keen.publish("view_project", {:visitor_id => current_user.id, :title => @project.title, :project_id => @project.id })
+	  @project = Project.find_by_id(params[:id])
 	end
 
 	def index
@@ -33,7 +32,7 @@ class ProjectsController < ApplicationController
 	def create
 		project = Project.create(params[:project])
     	redirect_to(project)	
-  end
+    end
 
 	def show
 		
@@ -45,6 +44,14 @@ class ProjectsController < ApplicationController
 			#skills_url = current_project.skills
 			#@skills_api = JSON.load(open(skills_url))
 		end
+
+		# keen = Keen::Client.new(:project_id => "project_id", :write_key => "write_key")
+
+		# project_view = {
+		# 	:user => @current_user
+		# }
+
+		# keen.add_event("project_view", project_view)
 
 	end
 
