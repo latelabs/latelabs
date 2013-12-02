@@ -23,6 +23,8 @@ Latelabs::Application.routes.draw do
 
   get "/signedup" => "signups#signedup"
 
+  get "/stats" => "signups#stats"
+
   post "/stars" => "stars#create"
 
   post "/skills" => "skills#create"

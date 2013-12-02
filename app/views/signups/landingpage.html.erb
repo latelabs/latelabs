@@ -9,7 +9,7 @@
 		<%= form_for @signup do |f| %>
 		   <%= f.text_field :signup_email  %>
 		   <%= f.submit "submit" %>
-		   <% Keen.publish("signup_email", {:submited => true }) %>
+		   <% Keen.publish("signup_email", { :submited => true }) %>
 		<% end %>
 		
 	</div>
