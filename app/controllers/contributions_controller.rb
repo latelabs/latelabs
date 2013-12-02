@@ -7,7 +7,7 @@ class ContributionsController < ApplicationController
 	def create
 		contribution = Contribution.create(params[:contribution])
 		current_project = Project.find(params[:id])
-    redirect_to projects_path(current_project)
+    	redirect_to projects_path(current_project)
 	end
 
 end

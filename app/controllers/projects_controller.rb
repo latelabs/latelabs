@@ -2,10 +2,8 @@ class ProjectsController < ApplicationController
 	
 	before_filter :authenticate_user!
 
-	# keen analytics to track information about individual projects
-
 	def project
-  @project = Project.find_by_id(params[:id])
+	  @project = Project.find_by_id(params[:id])
 	end
 
 	def index
@@ -32,7 +30,7 @@ class ProjectsController < ApplicationController
 	def create
 		project = Project.create(params[:project])
     	redirect_to(project)	
-  end
+    end
 
 	def show
 		

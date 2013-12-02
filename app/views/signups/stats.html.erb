@@ -1,0 +1,20 @@
+<div id="count"></div>
+
+<script type="text/javascript">
+
+	var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+
+	Keen.configure({
+	    projectId: "522ea8fca136b00bbe000002",
+	    readKey: "e446d105279b21412715497398e2a0c3399e5ead8dd524231ac4797c5a48e9184085f6f235b8e86a357a09f46baa9d8686a73dd33fee9d9ace01d1b0821d8bce79c7feebdb021dcef89ae8a8fa17dbfab44da31885fcc74570bb91234aceab5f983a93698c5b7e8e0966a4d50d942839",
+	    writeKey: "bae56e31a8923533abde6e4c22872f61cdbee42aff0e842000a4943ffc1e3d5adb598b1c59eb2f6d9285141f65070c71a90ce3ccb6ce9da9a569a98f6491036109546f47693095ec383def4f9cd82288fcfd5ff84f77bdeeb7b1e5c5c44a485cc8ea71bb5d9f18f454136c595add242d"
+	});
+
+	Keen.onChartsReady(function() {
+	  var metric = new Keen.Metric("signup_email", {
+	    analysisType: "count"
+	  });
+	  metric.draw(document.getElementById("count"));
+	});
+
+</script>
