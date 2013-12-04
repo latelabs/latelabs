@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
 	def user
 	  @user = User.find_by_id(params[:id])
-	  #tracker = Keen.publish("view_profile", {:visitor_id => current_user.id, :name => @user.user_name })
+	  UserMailer.registration_confirmation(@user).deliver
 	end
 
 	def index
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 			github = Github.new oauth_token: @user.token
 			@api_activity = github.activity.events.performed current_user.user_name, :public => true
 			
-		# UserMailer.registration_confirmation(@user).deliver
+		UserMailer.registration_confirmation(@user).deliver
 		end
 
 	end
