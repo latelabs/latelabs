@@ -1,3 +1,5 @@
+<%= render 'header' %>
+
 <div class="welcome row">
 	<strong><h1>Collaborate on Side Projects</h1></strong>
 	<h2>Connect via Github to start building.</h2>
@@ -27,10 +29,18 @@
 </div>
 
 <div class="about row">
-	This is all about how awesome Late Labs is.
+	<img src="/assets/github_icon.png" height="600px" width="600px" />
+	<h1>Connecting developers with developers.</h1>
+	<h2>That's what Late Labs is for. Find projects to team up on, or find developers to collaborate with.</h2>
 </div>
-<br><br>
 <div class="why row">
-	This is some stats about our community and some highlighted projects.
+	<h1>Get experience on real-world projects.</h1>
+	<h2>The great thing about Late Labs is learning from other developers on real projects.</h2>
+	<center><a id="button" href="/projects/">Checkout our projects</a></center>
 </div>
-<%= render :partial => 'footer' %>
+<div class="how row">
+	<h1>Help us create our product.</h1>
+	<h2>This content is about how we're opensource.</h2>
+	<center><a id="button" href="https://github.com/latelabs/latelabs">Check out our Github Project</a></center>
+</div>
+<%= render 'footer' %>

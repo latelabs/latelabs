@@ -36,3 +36,93 @@
 .featured img {
 	height: 40px;
 }
+
+.about, .row h1{
+	color: #FFF;
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: -40px;
+}
+
+.about img {
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.about h2 {
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+.why a {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: rgb(0, 155, 212);
+	font-size: 18px;
+	color: #fff;
+	border-radius: 10px;
+}
+
+
+
+.why img {
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.why h2 {
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	margin-bottom: 50px;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.how img {
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.how h2 {
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	margin-bottom: 50px;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.how a {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: rgb(0, 184, 174);
+	font-size: 18px;
+	color: #fff;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#button a{
+	text-align: center;
+	margin-top: -500px;
+}

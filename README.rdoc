@@ -1,4 +1,4 @@
-Connect developers to code together based on shared interists.
+Connect developers to code together based on shared interests.
 
 People connect via GitHub connect and create profiles. From their profiles they can make project pages. Other users can search for projects based on code language and topics (i.e. sharing economy) and can either star or apply to projects.
 
