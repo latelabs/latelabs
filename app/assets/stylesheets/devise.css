@@ -1,0 +1,33 @@
+body {
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	margin-top: 200px;
+	font-size: 40px;
+	margin-bottom: 200px;
+
+}
+
+#form {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px;
+	border-color: #ccc;
+}
+
+#user_user_name, #user_email, #user_password, #user_password_confirmation {
+height: 39px;
+font-family: helvetica, arial, sans-serif;
+font-size: 16px;
+border: 1px solid #ccc;
+text-align: left;
+text-decoration: none;
+padding-right: 20px;
+text-indent: 10px;
+}
+
+label {
+	font-size: 16px;
+}
