@@ -1,8 +1,8 @@
 <h4>Add skills to your profile </h4>
-	<%= form_for @skillset do |f| %>
-	   <%= text_field_tag "skill[skill]", "", :autofocus => true %>
-	   <%= f.hidden_field :skillable_id %>
-	   <%= f.hidden_field :skillable_type %>
-	  <br>
-	   <%= f.submit "add skill" %>
-	<% end %>
+<%= form_for @skillset do |f| %>
+   <%= text_field_tag "skill[skill]", "", :autofocus => true %>
+   <%= f.hidden_field :skillable_id %>
+   <%= f.hidden_field :skillable_type %>
+  <br>
+   <%= f.submit "add skill" %>
+<% end %>

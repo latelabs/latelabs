@@ -42,6 +42,7 @@ group :development, :test do
 	gem 'pry-rails'
 	gem 'sqlite3'
 	gem 'annotate'
+	gem 'debugger'
 end
 
 # To use ActiveModel has_secure_password

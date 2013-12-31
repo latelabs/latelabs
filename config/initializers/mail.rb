@@ -3,8 +3,8 @@ require 'development_mail_interceptor'
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => "latelabs.com",
-  :user_name            => "justin",
+  :domain               => "smtp.gmail.com",
+  :user_name            => "justin@latelabs.com",
   :password             => "Aimoo1ee",
   :authentication       => "plain",
   :enable_starttls_auto => true
