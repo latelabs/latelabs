@@ -1,7 +1,7 @@
 class DevelopmentMailInterceptor
 
   def self.delivering_email(message)
-    message.to = "email"
+    message.to = "elofjohnson@gmail.com"
   end
 
 end

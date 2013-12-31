@@ -9,6 +9,7 @@ def create
 
 		if @signup.save
    			redirect_to "/signedup"
+   			#UserMailer.registration_confirmation(@signup.signup_email).deliver
 		end
 		# redirect_to signups_path(signedup)
 	end
