@@ -1,16 +1,12 @@
 <%= render 'header' %>
 
-<br>
-<br>
-<br>
-<br>
-
 <div class="containter">
     <div class="row">
 
         <!-- User Profile Info Section -->
 
         <div class="col-md-2">
+            <aside>
             <ul>
             	<li><img src="http://www.gravatar.com/avatar/<%= @user.gravartar_id %>"/></li>
             	<li><h1><%= @user.user_name %></h1></li>
@@ -25,6 +21,7 @@
             	<li><span class="mail_image"><%= image_tag "mail.png" %></span> <%= link_to current_user.messages_received.count, '/messages'  %></li>
             	<li><%#= "projects following  :  " %><%#= current_user.stars.count %></li>
             </ul>
+        </aside>
         </div>
 
 
