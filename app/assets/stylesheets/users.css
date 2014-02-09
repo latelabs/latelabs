@@ -49,6 +49,7 @@ h3 {
 	border:2px solid white;
 	border-radius:25px;
 	outline: none;
+	padding-left: 10px;
 }
 
 .navbar input {
@@ -108,7 +109,23 @@ h3 {
 	margin-right: 1px;
 }
 
+.dropdown-menu {
 
+}
+
+#highlight {
+
+	padding: 0px 0px;
+
+}
+
+#highlight a:hover {
+	background-color: rgb(254, 116, 0);
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	white-space: nowrap;
+}
 
 /* Footer */
 
