@@ -10,7 +10,7 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 35px;
-	padding-bottom: 40px;
+	padding-bottom: 0px;
 	color: #333 ;
 }
 
@@ -18,7 +18,7 @@ h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 20px;
-	padding-bottom: 40px;
+	padding-bottom: 0px;
 	color: #333 ;
 }
 
@@ -26,18 +26,32 @@ h3 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
-	padding-bottom: 40px;
+	padding-bottom: 0px;
 	color: #333 ;
 }
 
+hr {
+	padding-bottom: 20px;
+}
 
+a {
+	color: rgb(254, 116, 0);
+}
+
+#links {
+	color: rgb(254, 116, 0);
+}
+
+p a:active{
+	color: rgb(254, 116, 0);
+}
 
 
 /* Header */
 
 
 
-.navbar{
+nav{
 	background-color: rgb(254, 116, 0);
 	font-family: 'Roboto', sans-serif;
 	height: 70px;
@@ -46,7 +60,7 @@ h3 {
 .navbar .search #search{
 	width: 350px;
 	height: 30px;
-	border:2px solid white;
+	border: 2px solid white;
 	border-radius:25px;
 	outline: none;
 	padding-left: 10px;
@@ -95,7 +109,7 @@ h3 {
 
 .navbar .search{
 	float: left;
-	margin-left: 300px;
+	margin-left: 200px;
 }
 
 .navbar .search #search{
@@ -140,6 +154,8 @@ h3 {
 	line-height: 120px;
 	padding: 0 5%;
 	min-width: 950px;
+	padding-top: 0px;
+	margin-top: 100px;
 }
 
 .footer ul {
@@ -159,14 +175,16 @@ h3 {
 
 .logo{
 	position: fixed;
-	margin-left: 100px;
+	margin-left: 0px;
 }
 
 .search .search_button{
 	display:none;
 }
 
-
+#spacing {
+	padding-top: 300px;
+}
 
 
 
