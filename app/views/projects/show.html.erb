@@ -1,11 +1,13 @@
 <%= render 'users/header' %>
-<div>
+
+<div class="container">
 	<ul>
 		<div class="row">
+
 			<h1><li><%= @project.title %></li></h1>
 			<h3><li><%= link_to('Link to the Code', @project.code_repository_link) %></li></h3>
 		</div>
-	</div>
+
 	<div>
 		<div class="follow_buttons">
 				<% unless current_user.id == @project.user_id %>

@@ -1,11 +1,10 @@
 <%= render 'header' %>
 
+
 <div class="containter">
-    <div class="row">
-
         <!-- User Profile Info Section -->
-
-        <div class="col-md-2">
+    <div class="row">
+        <div class="col-sm-12">
             <aside>
             <ul>
             	<li><img src="http://www.gravatar.com/avatar/<%= @user.gravartar_id %>"/></li>
@@ -23,7 +22,7 @@
             </ul>
         </aside>
         </div>
-
+    </div>
 
         <!-- Activity Feed Section -->
 
@@ -32,8 +31,8 @@
             <% @api_activity.sort_by{|t| - t.created_at.to_i}.first(10).each do |activity| %>
                 <ul>
               <li><h4><%= activity.type %></h4></li>
-              <li><%#= activity.name %></li>
-              <li><%#= activity.description %></li>
+              <li><%= activity.name %></li>
+              <li><%= activity.description %></li>
               <li><%= activity.created_at %></li>
               </ul>
             <% end %>               
@@ -61,10 +60,10 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div class="bio"><h1><%#= @user.bio %></h1></div>
+            <div class="bio"><h1><%= @user.bio %></h1></div>
                 <% unless current_user.id != @user.id %>    
                 <div class="new_project">
-                    <h2><center><%= link_to "New Project!", :controller => "projects", :action => "new" %></center></h2>
+                    <button class="btn btn-default"><%= link_to "New Project!",class: "btn btn-default",  :controller => "projects", :action => "new" %></button>
                 </div>
                 <br>
                 <br>
@@ -93,6 +92,7 @@
 
 </div>
 
+</div>
 
 <%= render 'footer' %>
 
