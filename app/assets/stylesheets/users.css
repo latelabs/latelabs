@@ -188,6 +188,39 @@ nav{
 
 
 
+/* Projects */
+
+.project{
+	background-color: #008b8b;
+	width:100%;
+	height:-webkit-calc(100% - 70px);
+	padding: 0;
+	margin: 0;
+	position: relative;
+	margin-top: -50px;
+	height: 260px;
+	padding-top: 50px;
+	text-align: center;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.project h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 65px;
+	color: white;
+}
+
+.project h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+	font-size: 24px;
+	padding-bottom: 40px;
+	color: white;
+	text-decoration: underline;
+}
+
 
 /*.welcome.row{
 	background-color: rgb(254, 116, 0);

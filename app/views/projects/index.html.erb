@@ -1,6 +1,6 @@
 <%= render "users/header" %>
 
-
+<div class ="container">
 <div class="projects_index">
 <% @project.each do |project| %>
 	<ul>
@@ -8,6 +8,8 @@
 	<li><%= project.explanation %></li>
 	</ul>
 <% end %>
+</div>
+
 </div>
 
 <%= render 'users/footer' %>

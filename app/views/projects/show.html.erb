@@ -1,14 +1,15 @@
 <%= render 'users/header' %>
 
-<div class="container">
-	<ul>
-		<div class="row">
+		<div class="row project">
 
 			<h1><li><%= @project.title %></li></h1>
 			<h3><li><%= link_to('Link to the Code', @project.code_repository_link) %></li></h3>
 		</div>
 
-	<div>
+
+
+<div class="container">
+	<div class="row">
 		<div class="follow_buttons">
 				<% unless current_user.id == @project.user_id %>
 				<!-- trying to build out more rail'sy routes -->
@@ -22,16 +23,29 @@
 				<li><% Keen.publish("view_project", {:visitor_id => current_user.id, :title => @project.title, :project_id => @project.id }) %></li>
 			<% end %>
 		</div>
-			<h4><li>About: <%= @project.explanation %></li></h4>
-			<li><%#= @project.skill %></li>
-			<li><%#= @project.contributors_link %></li>
-	</ul>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-8">
+			<h1 class="text-center">About:</h1>
+			<p><%= @project.explanation %></p>
+<!-- 			<li><%#= @project.skill %></li>
+			<li><%#= @project.contributors_link %></li> -->
+		</div>
+				<div class="col-md-2">
+		</div>
+	</div>
+
+
 <% unless current_user.id != @project.user_id %>	
 	<div class="project_edit">
-	<ul>
-		<li><%= link_to('Edit', edit_project_path(@project)) %></li>
-		<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
-	</ul>
+		<ul>
+			<li><%= link_to('Edit', edit_project_path(@project)) %></li>
+			<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
+		</ul>
 	</div>
 <%= render 'skills' %>
 <% end %>
@@ -42,6 +56,7 @@
 	  <h3><li><%= s.skill %></li></h3>
 	  </ul>
 <% end %>
+</div>
 </div>
 	<%#= @project.inspect %>
 

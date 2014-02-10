@@ -1,12 +1,21 @@
+
+
 <%= form_for @project do |f| %>
-  <%= f.text_field :title, :autofocus => true %>
-  <%= f.label :title %>
+
+  <%= f.label :title, "Project Title" %>
+    <br>
+  <%= f.text_field :title, :autofocus => true, class: "form-control" %>
   <br>
-  <%= f.text_field :code_repository_link %>
-  <%= f.label :code %>
+
+  <%= f.label :code, "Code Repository Link" %>
+    <br>
+  <%= f.text_field :code_repository_link, class: "form-control" %>
+
   <br>
-  <%= f.text_field :explanation %>
-  <%= f.label :explanation %>
+  <%= f.label :explanation, "Project Details" %>
+  <br>
+  <%= f.text_area :explanation, class: "form-control" %>
+
   <p><p>
   <%= f.submit  class: "btn" %>
 <% end %>
