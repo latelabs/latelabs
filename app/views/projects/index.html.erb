@@ -8,7 +8,7 @@
 <div class="projects_index">
 <% @project.each do |project| %>
 
-	<h2 ><%= project.title %></h2>
+	<h2><%= project.title %></h2>
 	<p><%= project.explanation %></p>
 	<%= button_to project.title, class: "btn btn-primary" %>
 	<hr>

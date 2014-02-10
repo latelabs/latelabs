@@ -20,7 +20,8 @@
 					<h4><%= "Already Following!" %></h4>
 				<% end %></li>
 				<li><a href='/messages/new/?user_receiver=<%=@project.user_id%>&project_id=<%=@project.id%>'><button>Message Project Owner</button></a><li>
-					<% end %>
+				<li><% Keen.publish("view_project", {:visitor_id => current_user.id, :title => @project.title, :project_id => @project.id }) %></li>
+			<% end %>
 		</div>
 	</div>
 
@@ -29,7 +30,7 @@
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-8">
-			<h1 class="text-center">About:</h1>
+			<h2 class="text-center">About:</h2>
 			<p><%= @project.explanation %></p>
 <!-- 			<li><%#= @project.skill %></li>
 			<li><%#= @project.contributors_link %></li> -->
