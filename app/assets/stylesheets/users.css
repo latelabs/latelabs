@@ -46,6 +46,10 @@ p a:active{
 	color: rgb(254, 116, 0);
 }
 
+ul {
+	text-decoration: none;
+	list-style-type: none;
+}
 
 /* Header */
 
@@ -187,6 +191,52 @@ nav{
 }
 
 
+/* Profile Page */
+
+.profilepage {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 35px;
+	padding-bottom: 0px;
+	color: #333;
+}
+
+.activity ul {
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.activity ul li h2 {
+		font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+	padding-bottom: 0px;
+	color: #333;
+}
+
+.activity ul li a {
+		font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	padding-bottom: 0px;
+	color: #333;
+}
+
+.activity ul li p {
+		font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+	font-size: 14px;
+	padding-bottom: 0px;
+	color: #333;
+}
+
+.activity h2 {
+		font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+	font-size: 14px;
+	padding-bottom: 0px;
+	color: #333;
+}
 
 /* Projects */
 
@@ -297,6 +347,10 @@ nav{
 	width:101.8%;
 }
 
+.pullleft {
+	margin-left: -30px;
+	opacity: 0.4;
+}
 
 
 

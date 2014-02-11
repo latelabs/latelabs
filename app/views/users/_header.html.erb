@@ -16,7 +16,7 @@
 		<%= link_to image_tag("latelabsLogo.png", :border => 0), {:action => 'show', :controller => 'users', :id => current_user.id}, {:class => 'logo'} %>
 			<div class="search">
 			<%= form_tag skillsets_path, :method => 'get' do %>
-		<%= text_field_tag :search, nil, :placeholder => 'search i.e. rails or angular' %>
+		<%= text_field_tag :search, nil, :placeholder => 'search i.e. rails or angular' %><i class=" pullleft fa fa-search"></i>
 		<div class="search_button"><%= submit_tag "search" %></div>
 		</div>
 		<% end %>
