@@ -36,7 +36,6 @@ end
 
 group :development do
 	gem 'rails-erd'
-	gem 'debugger'
 end
 
 group :development, :test do
