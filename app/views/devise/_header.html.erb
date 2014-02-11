@@ -4,7 +4,7 @@
 			<%= content_tag :div, msg, id: "flash_#{name}" %>
 		<% end %>
 	</div>
-</div> 
+</div>
 
 <div class="navbar navbar-fixed-top">
 		<div class="logo"><%= image_tag "latelabsLogo.png" %></div>
@@ -43,8 +43,6 @@
 		  </div></li>
 		</ul>
 	</div>
-
-	
 	<% else %>
 		 <%= link_to "login", user_omniauth_authorize_path(:github) %>
 		  <%#= link_to "signin", new_user_session_path %> 
