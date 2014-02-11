@@ -39,23 +39,31 @@
 		</div>
 	</div>
 
-
+<center>
+	<div class="row text-center">
+		<div class="col-md-12">
 <% unless current_user.id != @project.user_id %>	
 	<div class="project_edit">
 		<ul>
-			<li><%= link_to('Edit', edit_project_path(@project)) %></li>
-			<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
+			<li><a id="links"><%= link_to('Edit', edit_project_path(@project)) %></a></li>
+			<li> | </li>
+			<li><a id="links"><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></a></li>
 		</ul>
 	</div>
-<%= render 'skills' %>
+<center><%= render 'skills' %></center>
 <% end %>
+
 <br>
-<h4>Check out the technologies we are using:</h4>
+<br>
+<center><h4>Check out the technologies we are using:</h4></center></center>
 <% @project.skills.each do |s| %>
 		<ul>
-	  <h3><li><%= s.skill %></li></h3>
+	  <center><h3 class="text-center"><li><%= s.skill %></li></h3></center>
 	  </ul>
 <% end %>
+</div>
+</div>
+</center>
 </div>
 </div>
 	<%#= @project.inspect %>

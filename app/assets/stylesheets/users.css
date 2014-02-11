@@ -288,6 +288,19 @@ nav{
 	font-size: 20px;
 }
 
+#links {
+	color: rgb(254, 116, 0);
+}
+
+
+.project_edit ul li a {
+	color: rgb(254, 116, 0);
+	display: inline;
+}
+
+.project_edit ul li{
+  display: inline;
+}
 
 /* Landing Page Users */
 
