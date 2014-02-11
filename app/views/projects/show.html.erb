@@ -1,12 +1,15 @@
-<%= render 'header' %>
-<div class="show_project">
-	<ul>
-		<div class="row">
+<%= render 'users/header' %>
+
+		<div class="row project">
+
 			<h1><li><%= @project.title %></li></h1>
 			<h3><li><%= link_to('Link to the Code', @project.code_repository_link) %></li></h3>
 		</div>
-	</div>
-	<div class="rest">
+
+
+
+<div class="container">
+	<div class="row">
 		<div class="follow_buttons">
 				<% unless current_user.id == @project.user_id %>
 				<!-- trying to build out more rail'sy routes -->
@@ -20,26 +23,48 @@
 				<li><% Keen.publish("view_project", {:visitor_id => current_user.id, :title => @project.title, :project_id => @project.id }) %></li>
 			<% end %>
 		</div>
-			<h4><li>About: <%= @project.explanation %></li></h4>
-			<li><%#= @project.skill %></li>
-			<li><%#= @project.contributors_link %></li>
-	</ul>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-8">
+			<h2 class="text-center">About:</h2>
+			<p><%= @project.explanation %></p>
+<!-- 			<li><%#= @project.skill %></li>
+			<li><%#= @project.contributors_link %></li> -->
+		</div>
+				<div class="col-md-2">
+		</div>
+	</div>
+
+<center>
+	<div class="row text-center">
+		<div class="col-md-12">
 <% unless current_user.id != @project.user_id %>	
 	<div class="project_edit">
-	<ul>
-		<li><%= link_to('Edit', edit_project_path(@project)) %></li>
-		<li><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></li>
-	</ul>
+		<ul>
+			<li><a id="links"><%= link_to('Edit', edit_project_path(@project)) %></a></li>
+			<li> | </li>
+			<li><a id="links"><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></a></li>
+		</ul>
 	</div>
-<%= render 'skills' %>
+<center><%= render 'skills' %></center>
 <% end %>
+
 <br>
-<h4>Check out the technologies we are using:</h4>
+<br>
+<center><h4>Check out the technologies we are using:</h4></center></center>
 <% @project.skills.each do |s| %>
 		<ul>
-	  <h3><li><%= s.skill %></li></h3>
+	  <center><h3 class="text-center"><li><%= s.skill %></li></h3></center>
 	  </ul>
 <% end %>
+</div>
+</div>
+</center>
+</div>
 </div>
 	<%#= @project.inspect %>
 

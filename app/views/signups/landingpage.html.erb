@@ -6,9 +6,15 @@
 		
 		<h2>To receive an invite to our private beta, signup and we will get back to you when everythings ready.</h2>
 
+		<%= form_for @signup do |f| %>
+		   <%= f.text_field :signup_email  %>
+		   <%= f.submit "submit" %>
+		   <% Keen.publish("signup_email", { :submited => true }) %>
+		<% end %>
 
 	</div>
 	<footer>
+		<br>
 		<p>To contribute to our Open-Source platform, check out our <a href="https://github.com/latelabs/latelabs">Github Repository</a></p>
 	</footer>
 </div>

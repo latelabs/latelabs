@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 
@@ -28,6 +29,7 @@ gem 'foreman'
 gem 'keen'
 gem "em-http-request", "~> 1.0"
 gem 'newrelic_rpm'
+gem 'rake', '10.1.1'
 
 group :production do
 	gem 'pg'

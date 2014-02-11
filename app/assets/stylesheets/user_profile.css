@@ -1,9 +1,8 @@
-.welcome.row{
+/*.welcome.row{
 	background-color: rgb(254, 116, 0);
 	width:100%;
-	height:-webkit-calc(100% - 70px);
-	padding: 0;
-	margin: 0;
+	margin-top: -150px;
+	height: 700px;
 	position: relative;
 }
 
@@ -63,10 +62,10 @@
 	position: absolute;
 	line-height: 120px;
 	padding: 0 5%;
-	min-width: 950px;
+	min-width: 9/50px;
 }
 
-.footer ul {
+/*.footer ul {
 	float: right;
 }
 
@@ -78,8 +77,8 @@
 .footer ul li a:link, a:visited, a:hover, a:active {
 	color: white;
 	list-style: yes;
-}
-
+}*/
+/*
 ul{
 	list-style-type: none;
 }
@@ -290,4 +289,5 @@ dropdown-menu pull-right:active {
 	padding-bottom: 10px;
 }
 
+*/
 

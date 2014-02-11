@@ -1,17 +1,33 @@
-<h2>Sign in</h2>
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="logo"><%= image_tag "latelabsLogo.png" %></div>
+    </div>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+<h1>Sign in</h1>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	<div><%= f.label :username %><br />
-  <%= f.text_field :user_name, :autofocus => true %></div>
-
+  <%= f.text_field :user_name, :autofocus => true, class: "form-control" %></div>
+<br>
   <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <%= f.password_field :password, class: "form-control" %></div>
 
   <% if devise_mapping.rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+<br>
+  <div><%= f.submit "Sign in", class: "btn btn-default" %></div>
 <% end %>
+
+</div>
 
 <%= render "devise/shared/links" %>

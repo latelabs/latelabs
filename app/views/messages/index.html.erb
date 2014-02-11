@@ -1,7 +1,11 @@
+<%= render 'users/header' %>
+
+<div class="container">
+
 <div class="messages">
 
 	<h1><%= current_user.user_name %>'s Inbox</h1>
-	<br>
+
 	<h3>total count: (<%= current_user.messages_received.count %>)</h3>
 	<br>
 	<% current_user.messages_received.reverse.each do |m| %>
@@ -17,3 +21,16 @@
 	<% end %>
 
 </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="spacing">
+</div>
+
+<%= render 'users/footer' %>

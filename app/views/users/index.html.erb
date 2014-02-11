@@ -1,12 +1,14 @@
 <%= render 'header' %>
 
 <!-- This is the old landing page and we are not using it anymore. Could be a template for the launch version -->
-
+<div class="container-fluid">
 <div class="welcome row">
 	<strong><h1>Collaborate on Side Projects</h1></strong>
 	<h2>Connect via Github to start building.</h2>
 		<a href="<%= user_omniauth_authorize_path(:github) %>"><%= image_tag "github_btn.png" %></a> 
 		
+
+
 <div class="featured">
 
 			<ul>
@@ -44,5 +46,8 @@
 	<h1>Help us create our product.</h1>
 	<h2>This content is about how we're opensource.</h2>
 	<center><a id="button" href="https://github.com/latelabs/latelabs">Check out our Github Project</a></center>
+</div>
+</div>
+</div>
 </div>
 <%= render 'footer' %>
