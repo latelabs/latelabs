@@ -1,6 +1,8 @@
-/*.welcome{
+.welcome{
 	text-align: center;
 	margin-top: 80px;
+	padding-top: 40px;
+	width: 100%;
 }
 
 .welcome h1{
@@ -94,6 +96,10 @@
 	padding-top: 10px;
 }
 
+.how {
+	margin-bottom: -100px;
+}
+
 .how img {
 	margin-top: 0px;
 	padding-bottom: 0px;
@@ -124,9 +130,5 @@
 	text-align: center;
 }
 
-#button a{
-	text-align: center;
-	margin-top: -500px;
-}
-*/
+
 

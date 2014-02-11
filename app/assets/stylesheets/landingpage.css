@@ -1,4 +1,4 @@
-/*.landingpage {
+.landingpage {
 	background-color: rgb(254, 116, 0);
 	text-align: center;
 	position: absolute;
@@ -6,6 +6,7 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
+	width: 100%;
 }
 
 .landingpage img{
@@ -18,7 +19,7 @@
 }
 
  
-img:hover{opacity:0.2;}​
+.landingpage img:hover{opacity:0.2;}​
 
 .main {
 	margin-top: 10%;
@@ -44,13 +45,12 @@ img:hover{opacity:0.2;}​
 	margin-bottom: 50px;
 	font-size: 24px;
 	background-color: rgb(254, 116, 0);
-
 }
 
 .landingpage footer {
 	background-color: rgb(22, 22, 22);
-	width: 110%;
-	margin-left: -5%;
+	width: 100%;
+
 	clear: both;
 	position:absolute;
 	bottom:0;
@@ -70,7 +70,7 @@ img:hover{opacity:0.2;}​
 	color: rgb(254, 116, 0);
 }
 
-input[type=text] {
+.landingpage input[type=text] {
 	height: 39px;
 	font-family: helvetica, arial, sans-serif;
 	font-size: 16px;
@@ -81,7 +81,7 @@ input[type=text] {
 	text-indent: 10px;
 }
 
-input[type=submit] {
+.landingpage input[type=submit] {
 	background-color: #000;
 	font-family: helvetica, arial, sans-serif;
 	color: #fff;
@@ -93,13 +93,11 @@ input[type=submit] {
 	cursor: hand;
 	outline: none;
 }
-input[type=submit]:hover {
+.landingpage input[type=submit]:hover {
 	background-color: #333;
 	cursor: pointer;
 	outline: none;
 }
-
-
 
 @media screen and (max-width: 587px) {
 
@@ -153,7 +151,7 @@ input[type=submit]:hover {
 	color: #000;
 }
 
-input[type=text] {
+.landingpage input[type=text] {
 	height: 39px;
 	font-family: helvetica, arial, sans-serif;
 	font-size: 16px;
@@ -164,7 +162,7 @@ input[type=text] {
 	text-indent: 10px;
 }
 
-input[type=submit] {
+.landingpage input[type=submit] {
 	background-color: #000;
 	font-family: helvetica, arial, sans-serif;
 	color: #fff;
@@ -177,8 +175,8 @@ input[type=submit] {
 	outline: none;
 }
 
-input[type=submit]:hover {
+.landingpage input[type=submit]:hover {
 	background-color: #333;
 	cursor: pointer;
 	outline: none;
-}*/
+}
