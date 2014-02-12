@@ -4,7 +4,7 @@ ruby '1.9.3'
 gem 'rails', '3.2.13'
 
 gem 'jquery-rails'
-gem 'devise'
+gem 'devise', '3.0.3'
 gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 gem 'mail'
 gem 'github_api'
