@@ -219,7 +219,7 @@ DEPENDENCIES
   better_errors
   coffee-rails (~> 3.2.1)
   debugger
-  devise (= 3.0.3)
+  devise
   em-http-request (~> 1.0)
   foreman
   github_api
