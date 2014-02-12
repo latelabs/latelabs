@@ -101,6 +101,8 @@
 
 @media screen and (max-width: 587px) {
 
+	}
+
 	.landingpage {
 		background-color: rgb(254, 116, 0);
 		text-align: center;
@@ -180,4 +182,3 @@
 		cursor: pointer;
 		outline: none;
 	}
-}
