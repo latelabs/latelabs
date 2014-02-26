@@ -26,7 +26,11 @@
   <%= f.label :code, "Code Repository Link" %>
   <br>
   <%= f.text_field :code_repository_link, class: "form-control" %>
-
+  <br>
+  <%= f.label :explanation, "Project Details" %>
+  <br>
+  <%= f.text_area :explanation, class: "form-control" %>
+  
   <br>
   <%= f.hidden_field :user_id, :value => @user.id %>
   <p><p>
