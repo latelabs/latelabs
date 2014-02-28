@@ -28,6 +28,11 @@
   <%= f.text_field :code_repository_link, class: "form-control" %>
 
   <br>
+  <%= f.label :explanation, "Project Details" %>
+  <br>
+  <%= f.text_area :explanation, class: "form-control" %>
+
+
   <%= f.hidden_field :user_id, :value => @user.id %>
   <p><p>
   <%= f.submit  class: "btn btn-default" %>
@@ -41,3 +46,4 @@
 <br>
 <br>
 <%= render 'users/footer' %>
+
