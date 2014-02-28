@@ -1,18 +1,22 @@
-<div class="row">
-	<div class="flash">
-		<% flash.each do |name, msg| %>
-			<%= content_tag :div, msg, id: "flash_#{name}" %>
-		<% end %>
-	</div>
-</div>
 
-<div class="navbar navbar-fixed-top">
+	<div class="container">
+	<div class="row">
+		<div class="flash">
+			<% flash.each do |name, msg| %>
+				<%= content_tag :div, msg, id: "flash_#{name}" %>
+			<% end %>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-fixed-top">
+
+<div class="container">
 		<div class="logo"><%= image_tag "latelabsLogo.png" %></div>
 		<% if user_signed_in? %>
 		<%= link_to image_tag("latelabsLogo.png", :border => 0), {:action => 'show', :controller => 'users', :id => current_user.id}, {:class => 'logo'} %>
 			<div class="search">
 			<%= form_tag skillsets_path, :method => 'get' do %>
-		<%= text_field_tag :search, nil, :placeholder => 'search i.e. rails or angular' %>
+		<%= text_field_tag :search, nil, :placeholder => 'search i.e. rails or angular' %><i class=" pullleft fa fa-search"></i>
 		<div class="search_button"><%= submit_tag "search" %></div>
 		</div>
 		<% end %>
@@ -34,19 +38,32 @@
  		 <li><span class="mail_image"><%= image_tag "mail.png" %> <%= link_to current_user.messages_received.count, '/messages'  %></span></li> 
 		 <li><div class="dropdown">
 		  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= image_tag("arrow_down_white.png") %></a>
-		  <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+		  <ul id="highlight" class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
 		    <li><a href="/projects">Your projects</a></li>
-		    <li><%#= link_to 'Edit profile', edit_user_registration_path %></li>
+		    <li><%= link_to 'Edit profile   ', edit_user_registration_path %></li>
 		    <li role="presentation" class="divider"></li>
 		    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 		  </ul>
 		  </div></li>
 		</ul>
+
 	</div>
 	<% else %>
-		 <%= link_to "login", user_omniauth_authorize_path(:github) %>
-		  <%#= link_to "signin", new_user_session_path %> 
-		  <%#= link_to "join", new_user_registration_path %> 
+		 <%= link_to "Github Connect", user_omniauth_authorize_path(:github) %>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <%= link_to "  Sign In", new_user_session_path %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <%= link_to "  Join", new_user_registration_path %>    
 	<% end %>
 	</div>
+</nav>
 </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+

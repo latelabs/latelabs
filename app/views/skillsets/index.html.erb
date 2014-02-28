@@ -1,32 +1,39 @@
-<div class="container-fluid">
-	<div class="row-fluid">
+<%= render 'users/header' %>
+
+
+<div class="container">
+	<div class="row">
 		<div class="search">
 			<div class="span6">
 				<div class="user_skills">
-<% @user_skills.each do |s| %>
-	<% s.skill.users.each do |s| %>
-		<ul>
-		<li><img src="http://www.gravatar.com/avatar/<%= s.gravartar_id %>"/></li>
-		<li><%= s.user_name %></li>
-		<li><%= link_to "View Profile", user_path(s.id) %></li>
-		</ul>
-	<% end %>
-<% end %>
-</div>
-</div>
-		<div class="span6">
-			<div class="project_skills">
-<% @project_skills.each do |s| %>
-	<% s.skill.projects.each do |s| %>
-		<ul>
-		<li><h1><%= s.title %></h1></li>
-		<li><%= link_to "Checkout Project", project_path(s.id) %></li>
-		<br><br>
-		</ul>
-	<% end %>
-<% end %>
-</div>
-</div>
-</div>
-</div>
+
+					<% @user_skills.each do |s| %>
+						<% s.skill.users.each do |s| %>
+							<ul>
+								<li><img src="http://www.gravatar.com/avatar/<%= s.gravartar_id %>"/></li>
+								<li><h2><%= s.user_name %></h2></li>
+								<li><%= link_to "View Profile", user_path(s.id), style: "color: #333;" %></li>
+								<hr>
+							</ul>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+
+			<div class="span6">
+				<div class="project_skills">
+					<% @project_skills.each do |s| %>
+						<% s.skill.projects.each do |s| %>
+							<ul>
+								<li><h1><%= s.title %></h1></li>
+								<li><%= link_to "Checkout Project", project_path(s.id) %></li>
+								<br><br>
+							</ul>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </div>

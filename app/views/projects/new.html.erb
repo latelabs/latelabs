@@ -1,5 +1,8 @@
 <%= render 'users/header' %>
 
+
+
+<div class="container">
 <div class="show_projects">
 	<% @projects_api.each do |project| %>
 		<ul class="project">	
@@ -10,18 +13,37 @@
 		</ul>
 	<% end %>
 </div>
+
+<h1>Create Project</h1>
+<br>
 <div class="project_form">
 <%= form_for @project do |f| %>
-  <%= f.text_field :title, :autofocus => true %>
-  <%= f.label :title %>
+	  <%= f.label :title, "Project Title" %>
+	  <br>
+  <%= f.text_field :title, :autofocus => true, class: "form-control" %>
   <br>
-  <%= f.text_field :code_repository_link %>
-  <%= f.label :code %>
+
+  <%= f.label :code, "Code Repository Link" %>
+  <br>
+  <%= f.text_field :code_repository_link, class: "form-control" %>
+
+  <br>
+  <%= f.label :explanation, "Project Details" %>
+  <br>
+  <%= f.text_area :explanation, class: "form-control" %>
+
 
   <%= f.hidden_field :user_id, :value => @user.id %>
   <p><p>
-  <%= f.submit  class: "btn btn-primary" %>
+  <%= f.submit  class: "btn btn-default" %>
 <% end %>
 </div>
 
+</div>
+
+<div id="spacing">
+</div>
+<br>
+<br>
 <%= render 'users/footer' %>
+

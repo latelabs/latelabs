@@ -1,4 +1,4 @@
-.show_project{
+/*.show_project{
 	text-align: center;
 	margin-top: 50px;
 }
@@ -62,7 +62,7 @@ body {
 
 /*----- HEADER ------*/
 
-.center {
+/*.center {
 	width: 75%;
 	margin: 0 auto;
 }
@@ -167,7 +167,7 @@ body {
 
 /* submenu */
 
-.top_nav li:hover ul {
+/*.top_nav li:hover ul {
 	display: block;
 	z-index: 9999;
 }
@@ -194,12 +194,4 @@ body {
 	border-top: solid 2px #FFF;
 	z-index: 9999;
 	width: 160px;
-}
-
-
-/*------- END HEADER ------*/
-
-
-
-
- 
+}*/

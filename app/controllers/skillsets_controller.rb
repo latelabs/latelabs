@@ -18,11 +18,11 @@ class SkillsetsController < ApplicationController
 		@skillset.skill = @skill
 		if @skillset.save
    
-    redirect_to @skillset.skillable
-    
-    else
-      render :new
-    end
+	    redirect_to @skillset.skillable
+	    
+	    else
+	      render :new
+	    end
 	end
 
 end

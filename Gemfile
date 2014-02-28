@@ -29,6 +29,8 @@ gem 'foreman'
 gem 'keen'
 gem "em-http-request", "~> 1.0"
 gem 'newrelic_rpm'
+gem 'rake', '10.1.1'
+gem 'debugger'
 
 group :production do
 	gem 'pg'
@@ -44,7 +46,6 @@ group :development, :test do
 	gem 'pry-rails'
 	gem 'sqlite3'
 	gem 'annotate'
-	gem 'debugger'
 end
 
 # To use ActiveModel has_secure_password
