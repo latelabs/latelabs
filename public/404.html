@@ -1,117 +1,33 @@
 <!DOCTYPE html>
-<!--
-
-Hello future GitHubber! I bet you're here to remove those nasty inline styles,
-DRY up these templates and make 'em nice and re-usable, right?
-
-Please, don't. https://github.com/styleguide/templates/2.0
-
--->
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Page not found &middot; Late Labs</title>
     <style type="text/css" media="screen">
+    
       body {
         background-color: rgb(0, 184, 174);
         margin: 0;
-      }
-      body,
-      input,
-      button {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
-
-      #parallax_wrapper {
-        position: relative;
-        z-index: 0;
-        transition: all 0.25s ease-in;
-        -webkit-transition: all 0.25s ease-in 0;
-      }
-      #parallax_field {
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-      }
-      #parallax_field #parallax_bg {
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        width: 110%;
-        height: 300%;
-        z-index: 1;
-      }
-
-      #parallax_illustration img {
-        position: absolute;
-      }
-      #parallax_illustration #parallax_unicorn {
-        top: 72px;
-        left: 72px;
-        z-index: 10;
-      }
-      #parallax_illustration #parallax_404 {
-        top: 194px;
-        left: 725px;
-        z-index: 9;
-      }
-      #parallax_illustration #parallax_copy {
-        top: 370px;
-        left: 725px;
-        z-index: 8;
-      }
-
-      #fourlogo {
-        padding: 100px;
-      }
-
 
     </style>
   </head>
   <body>
+    <div class="container">
 
-    <div id="parallax_wrapper">
 
-      <a id="fourlogo" href="/"><img src="assets/latelabsLogo.png" /></a>
+        <img alt="unicorn" src="assets/404unicorn.png" />
 
-      <div id="parallax_field">
-        <img alt="building" class="js-plaxify" data-invert="true" data-xrange="0" data-yrange="20" height="415" id="parallax_bg" width="940" height ="100%"
-        src="" />
-      </div>
-      <div id="parallax_illustration">
-        <div id="auth"></div>
+        <img alt="404" src="assets/404.png" />
 
-        <img alt="unicorn" class="js-plaxify" data-xrange="20" data-yrange="10" height="700px" width="700px" id="parallax_unicorn" width=""
-        src="assets/404unicorn.png" />
-
-        <img alt="404" class="js-plaxify" data-xrange="10" data-yrange="10" height="" id="parallax_404" width=""
-        src="assets/404.png" />
-
-        <img alt="Unicorns do exist. This page doesn't." class="js-plaxify" data-xrange="10" data-yrange="10" height="" id="parallax_copy" width=""
+        <img alt="Unicorns do exist. This page doesn't."
         src="assets/404copy.png" />
 
 
-        <!--
-
-        <img alt="Octobi Wan Catnobi's shadow" class="js-plaxify" data-xrange="10" data-yrange="10" height="49" id="parallax_octocatshadow" width="166"
-        src="" />
-
-        <img alt="land speeder's shadow" class="js-plaxify" data-xrange="10" data-yrange="10" height="75" id="parallax_speedershadow" width="430"
-        src="" />
-
-        <img alt="building" class="js-plaxify" data-invert="true" data-xrange="50" data-yrange="20" height="123" id="parallax_building_1" width="304"
-        src="" />
-
-        <img alt="building" class="js-plaxify" data-invert="true" data-xrange="75" data-yrange="30" height="50" id="parallax_building_2" width="116"
-        src="" />
-      </div>-->
-
     </div>
 
-    
+        
 
-    </body>
+  </body>
 </html>
