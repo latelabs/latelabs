@@ -1,17 +1,16 @@
 <%= render 'users/header' %>
 
-		<div class="row project">
-
-			<h1><li><%= @project.title %></li></h1>
-			<h3><li><%= link_to('Link to the Code', @project.code_repository_link) %></li></h3>
-		</div>
-
-
+<div class="container">
+	<div class="row project">
+		<h1><li><%= @project.title %></li></h1>
+		<h3><li><%= link_to('Link to the Code', @project.code_repository_link) %></li></h3>
+	</div>
+</div>
 
 <div class="container">
 	<div class="row">
 		<div class="follow_buttons">
-				<% unless current_user.id == @project.user_id %>
+			<% unless current_user.id == @project.user_id %>
 				<!-- trying to build out more rail'sy routes -->
 				<%#= link_to "Message Project Owner", controller: "messages", id: "new", path(user_receiver: @project.user_id, project_id: @project.id) %>
 				<li><% unless already_following %>
@@ -23,49 +22,48 @@
 				<li><% Keen.publish("view_project", {:visitor_id => current_user.id, :title => @project.title, :project_id => @project.id }) %></li>
 			<% end %>
 		</div>
-	</div>
+	</div><!-- Close Row -->
 
-
+	<!-- Project Details Section -->
 	<div class="row">
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-8">
 			<h2 class="text-center">About:</h2>
 			<p><%= @project.explanation %></p>
-<!-- 			<li><%#= @project.skill %></li>
-			<li><%#= @project.contributors_link %></li> -->
+					<!-- 			<li><%#= @project.skill %></li>
+					<li><%#= @project.contributors_link %></li> -->
 		</div>
-				<div class="col-md-2">
+		<div class="col-md-2">
 		</div>
-	</div>
+	</div><!-- Close Row -->
 
-<center>
+
+	<center>
 	<div class="row text-center">
 		<div class="col-md-12">
-<% unless current_user.id != @project.user_id %>	
-	<div class="project_edit">
-		<ul>
-			<li><a id="links"><%= link_to('Edit', edit_project_path(@project)) %></a></li>
-			<li> | </li>
-			<li><a id="links"><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></a></li>
-		</ul>
-	</div>
-<center><%= render 'skills' %></center>
-<% end %>
+			<% unless current_user.id != @project.user_id %>	
+					<div class="project_edit">
+						<ul>
+							<li><a id="links"><%= link_to('Edit', edit_project_path(@project)) %></a></li>
+							<li> | </li>
+							<li><a id="links"><%= link_to('Delete', @project, :method => :delete, :confirm => 'Are you sure?') %></a></li>
+						</ul>
+					</div>
+				<center>
+					<%= render 'skills' %>
+				</center>
+			<% end %>
 
-<br>
-<br>
-<center><h4>Check out the technologies we are using:</h4></center></center>
-<% @project.skills.each do |s| %>
-		<ul>
-	  <center><h3 class="text-center"><li><%= s.skill %></li></h3></center>
-	  </ul>
-<% end %>
-</div>
-</div>
-</center>
-</div>
-</div>
-	<%#= @project.inspect %>
+	<br>
+	<br>
+	<center><h4>Check out the technologies we are using:</h4></center></center>
+		<% @project.skills.each do |s| %>
+			<ul>
+  			<center><h3 class="text-center"><li><%= s.skill %></li></h3></center>
+  		</ul>
+		<% end %>
+	</div><!-- Close Row -->
 
+</div><!-- Close Container -->
 
