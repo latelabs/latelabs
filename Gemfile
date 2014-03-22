@@ -30,7 +30,7 @@ gem 'keen'
 gem "em-http-request", "~> 1.0"
 gem 'newrelic_rpm'
 gem 'rake', '10.1.1'
-gem 'debugger'
+jgem 'debugger'
 
 group :production do
 	gem 'pg'
