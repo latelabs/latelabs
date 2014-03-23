@@ -8,8 +8,8 @@ def create
 	@signup = Signup.create!(params[:signup])
 
 	@signup.save
-	UserMailer.registration_confirmation(@signup.signup_email).deliver
 	redirect_to "/signedup"
+	UserMailer.registration_confirmation(@signup.signup_email).deliver
 end
 
 # def show #get request, read one object
