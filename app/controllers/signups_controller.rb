@@ -7,15 +7,13 @@ end
 def create
 	@signup = Signup.create!(params[:signup])
 
-	if @signup.save
-			redirect_to "/signedup"
-			#UserMailer.registration_confirmation(@signup.signup_email).deliver
-	end
-	# redirect_to signups_path(signedup)
+	@signup.save
+	UserMailer.registration_confirmation(@signup.signup_email).deliver
+	redirect_to "/signedup"
 end
 
 # def show #get request, read one object
-#     @signup = Signup.find(params[:id])	
+#     @signup = Signup.find(params[:id])
 # end
 
 end
