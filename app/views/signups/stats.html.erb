@@ -1,9 +1,10 @@
 <div id="count"></div>
-
-<%= Signup.all %>
-<%#= x.signup_email %>
-<%# end %>
-
+<ul>
+<% Signup.all.each do |x| %>
+<li><%= x.signup_email %> :
+date signed up = <%= x.created_at %><li>
+<% end %>
+</ul>
 
 <script type="text/javascript">
 

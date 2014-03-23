@@ -1,9 +1,11 @@
 require "ruby-debug"
 class UserMailer < ActionMailer::Base
   default :from => "justin@latelabs.com"
-  
+
+
   def registration_confirmation(user)
     @user = user
-    mail(to: @user.email, subject: "testing")
+    @url = "http://github.com/latelabs/latelabs"
+    mail(to: user, bcc: "hustle@latelabs.com", subject: "Thanks for signing up for LL")
   end
 end
