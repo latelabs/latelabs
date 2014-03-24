@@ -1,4 +1,3 @@
-require "ruby-debug"
 class UserMailer < ActionMailer::Base
   default :from => "justin@latelabs.com"
 
