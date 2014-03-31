@@ -1,10 +1,5 @@
-<h4>Add skills to your profile </h4>
-<br>
 <%= form_for @skillset do |f| %>
-   <%= text_field_tag "skill[skill]", "", :autofocus => true %>
-   <br>
+   <%= text_field_tag "skill[skill]", "", :placeholder => " Add skills", :autofocus => true %>
    <%= f.hidden_field :skillable_id %>
    <%= f.hidden_field :skillable_type %>
-  <br>
-   <%= f.submit "add skill", class: "btn btn-default" %>
 <% end %>
