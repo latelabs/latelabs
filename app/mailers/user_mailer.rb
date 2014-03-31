@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "justin@latelabs.com"
+  default :from => "hustle@latelabs.com"
 
 
   def registration_confirmation(user)
