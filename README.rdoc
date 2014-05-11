@@ -4,8 +4,6 @@ People connect via GitHub connect and create profiles. From their profiles they 
 
 Project owners can deny applicants or let them in as collaborators, but before they do they can review profiles and schedule times to interview or better yet schedule a time to pair program together.
 
-'''
-
 fork and create a branch
 
 $ bundle install
@@ -15,9 +13,6 @@ $ rake db:migrate
 Send us pull requests if you want to add something, and you're welcome to hit us up with notes if you want to ask questions.
 
 A tip is to immediatly deply to heroku as a test app for production.
-
-
-'''
 
 // licence //
 
