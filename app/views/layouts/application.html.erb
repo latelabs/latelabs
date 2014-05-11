@@ -32,10 +32,8 @@
 
 	</head>
 	<body>
-		<div class="container">
-			<%= yield %>
-		</div>
-	
-	<%= debug(params) if Rails.env.development? %>
+		<%= yield %>
+
+	<% debug(params) if Rails.env.development? %>
 	</body>
 </html>
