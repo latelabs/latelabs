@@ -10,7 +10,7 @@ def create
 	@signup.save
 	redirect_to "/signedup"
 	UserMailer.registration_confirmation(@signup.signup_email).deliver
-	Keen.publish("signup_email", { :submited => true })
+	Keen.publish(:sign_ups, { :email => @signup })
 end
 
 # def show #get request, read one object
