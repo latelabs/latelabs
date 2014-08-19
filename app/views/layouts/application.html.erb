@@ -7,7 +7,7 @@
 		<%= csrf_meta_tags %>
 
 		<meta content='user-scalable=no, initial-scale=1, width=device-width' id='viewport' name='viewport' />
-
+		<script src="https://d26b395fwzu5fz.cloudfront.net/latest/keen.min.js"></script>
 		<script type="text/javascript">
 
 			var _gaq = _gaq || [];
@@ -21,6 +21,11 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 
+
+			var client = new Keen({
+				projectId: "522ea8fca136b00bbe000002",
+				readKey: "e446d105279b21412715497398e2a0c3399e5ead8dd524231ac4797c5a48e9184085f6f235b8e86a357a09f46baa9d8686a73dd33fee9d9ace01d1b0821d8bce79c7feebdb021dcef89ae8a8fa17dbfab44da31885fcc74570bb91234aceab5f983a93698c5b7e8e0966a4d50d942839"
+			});
 		</script>
 
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,500,300italic,300' rel='stylesheet' type='text/css'>
