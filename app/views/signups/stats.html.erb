@@ -20,7 +20,7 @@ date signed up = <%= x.created_at %><li>
 	  var query = new Keen.Query("count_unique", {
 	    eventCollection: "sign_ups",
 	    timeframe: "this_year",
-	    targetProperty: "email",
+	    targetProperty: "email.signup_email",
 	    interval: "weekly"
 	  });
 	  client.draw(query, document.getElementById("signups"), {
